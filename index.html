@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Projects Reference</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .image-item {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        cursor: pointer;
+      }
+      .image-item:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+      .tech-badge {
+        display: inline-block;
+        transition: background-color 0.2s ease;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+      .modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-4 shadow-lg">
+      <div class="container mx-auto max-w-7xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Portfolio Projects</h1>
+        <p class="text-lg md:text-xl text-blue-100">A comprehensive reference of my development projects</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-7xl px-4 py-12">
+      <!-- Projects Grid -->
+      <div id="portfolio-images" class="space-y-16">
+        <!-- Stack (NextJs) -->
+        <section class="project-section">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Stack</h2>
+            <span class="tech-badge bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold">NextJs</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stack-nextjs/Admin-Dashboard.png')">
+              <img src="./stack-nextjs/Admin-Dashboard.png" alt="Admin Dashboard" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Admin Dashboard</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stack-nextjs/Admin-Tournament.png')">
+              <img src="./stack-nextjs/Admin-Tournament.png" alt="Admin Tournament" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Admin Tournament</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stack-nextjs/Enroll-Page-1.png')">
+              <img src="./stack-nextjs/Enroll-Page-1.png" alt="Enroll Page 1" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Enroll Page 1</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stack-nextjs/Enroll-Page-2.png')">
+              <img src="./stack-nextjs/Enroll-Page-2.png" alt="Enroll Page 2" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Enroll Page 2</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stack-nextjs/Home.png')">
+              <img src="./stack-nextjs/Home.png" alt="Home" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Home</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stack-nextjs/Register1.3.png')">
+              <img src="./stack-nextjs/Register1.3.png" alt="Register Step 1" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Register Step 1</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stack-nextjs/Register2.3.jpg')">
+              <img src="./stack-nextjs/Register2.3.jpg" alt="Register Step 2" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Register Step 2</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stack-nextjs/Register3.3.jpg')">
+              <img src="./stack-nextjs/Register3.3.jpg" alt="Register Step 3" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Register Step 3</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- KUGarden (ReactJs) -->
+        <section class="project-section">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">KUGarden</h2>
+            <span class="tech-badge bg-cyan-100 text-cyan-800 px-4 py-1 rounded-full text-sm font-semibold">ReactJs</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./kugarden-reactjs/iScreen Shoter - Google Chrome - 681130074528.jpg')">
+              <img src="./kugarden-reactjs/iScreen Shoter - Google Chrome - 681130074528.jpg" alt="KUGarden Screenshot 1" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Screenshot 1</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./kugarden-reactjs/iScreen Shoter - Google Chrome - 681130074819.jpg')">
+              <img src="./kugarden-reactjs/iScreen Shoter - Google Chrome - 681130074819.jpg" alt="KUGarden Screenshot 2" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Screenshot 2</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./kugarden-reactjs/iScreen Shoter - Google Chrome - 681130075025.jpg')">
+              <img src="./kugarden-reactjs/iScreen Shoter - Google Chrome - 681130075025.jpg" alt="KUGarden Screenshot 3" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Screenshot 3</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Kanoks.me (NextJs) -->
+        <section class="project-section">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">
+              <a href="https://kanoks.me" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">Kanoks.me</a>
+            </h2>
+            <span class="tech-badge bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold">NextJs</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./kanoks-me-nextjs/Home.png')">
+              <img src="./kanoks-me-nextjs/Home.png" alt="Kanoks.me Home Page" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Home Page</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lotto (NextJs) -->
+        <section class="project-section">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Lotto</h2>
+            <span class="tech-badge bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold">NextJs</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./lotto-nextjs/Home.png')">
+              <img src="./lotto-nextjs/Home.png" alt="Lotto Home Page" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Home Page</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LuckyNumberMagic (ReactJs) -->
+        <section class="project-section">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">LuckyNumberMagic</h2>
+            <span class="tech-badge bg-cyan-100 text-cyan-800 px-4 py-1 rounded-full text-sm font-semibold">ReactJs</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./lucky-number-magic-reactjs/Home.png')">
+              <img src="./lucky-number-magic-reactjs/Home.png" alt="LuckyNumberMagic Home" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Home Page</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SmartSales (C# Jquery) -->
+        <section class="project-section">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">SmartSales</h2>
+            <span class="tech-badge bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold">C#</span>
+            <span class="tech-badge bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold ml-2">jQuery</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./smartsales-csharp-jquery/Dashboard-page.png')">
+              <img src="./smartsales-csharp-jquery/Dashboard-page.png" alt="Dashboard" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Dashboard Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./smartsales-csharp-jquery/Depositories-page.png')">
+              <img src="./smartsales-csharp-jquery/Depositories-page.png" alt="Depositories" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Depositories Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./smartsales-csharp-jquery/Map-Report-page.png')">
+              <img src="./smartsales-csharp-jquery/Map-Report-page.png" alt="Map Report" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Map Report Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./smartsales-csharp-jquery/Reports-page.jpg')">
+              <img src="./smartsales-csharp-jquery/Reports-page.jpg" alt="Reports" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Reports Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./smartsales-csharp-jquery/Stock-In-page.png')">
+              <img src="./smartsales-csharp-jquery/Stock-In-page.png" alt="Stock In" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Stock In Page</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sport-Games (NextJs) -->
+        <section class="project-section">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Sport-Games</h2>
+            <span class="tech-badge bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold">NextJs</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./sport-games-nextjs/Login-Page.jpg')">
+              <img src="./sport-games-nextjs/Login-Page.jpg" alt="Login Page" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Login Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./sport-games-nextjs/Register-Events-Page.png')">
+              <img src="./sport-games-nextjs/Register-Events-Page.png" alt="Register Events" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Register Events Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./sport-games-nextjs/Admin-Tournament-Page.jpg')">
+              <img src="./sport-games-nextjs/Admin-Tournament-Page.jpg" alt="Admin Tournament" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Admin Tournament Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./sport-games-nextjs/Admin-Team-Page.png')">
+              <img src="./sport-games-nextjs/Admin-Team-Page.png" alt="Admin Team" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Admin Team Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./sport-games-nextjs/Admin-Print-Player-Page.png')">
+              <img src="./sport-games-nextjs/Admin-Print-Player-Page.png" alt="Admin Print Player" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Admin Print Player Page</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stock Portfolio Manager (ReactJs) -->
+        <section class="project-section">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Stock Portfolio Manager</h2>
+            <span class="tech-badge bg-cyan-100 text-cyan-800 px-4 py-1 rounded-full text-sm font-semibold">ReactJs</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stock-portfolio-manager-reactjs/Dashboard-page.png')">
+              <img src="./stock-portfolio-manager-reactjs/Dashboard-page.png" alt="Dashboard" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Dashboard</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stock-portfolio-manager-reactjs/Portfolios-page.png')">
+              <img src="./stock-portfolio-manager-reactjs/Portfolios-page.png" alt="Portfolios" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Portfolios Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stock-portfolio-manager-reactjs/Holding-page.png')">
+              <img src="./stock-portfolio-manager-reactjs/Holding-page.png" alt="Holdings" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Holdings Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stock-portfolio-manager-reactjs/Performance-page.png')">
+              <img src="./stock-portfolio-manager-reactjs/Performance-page.png" alt="Performance" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Performance Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stock-portfolio-manager-reactjs/DCA-Calculate-page.png')">
+              <img src="./stock-portfolio-manager-reactjs/DCA-Calculate-page.png" alt="DCA Calculate" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">DCA Calculate Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stock-portfolio-manager-reactjs/DCA-Log-page.png')">
+              <img src="./stock-portfolio-manager-reactjs/DCA-Log-page.png" alt="DCA Log" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">DCA Log Page</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stock-portfolio-manager-reactjs/Rebalance-page.png')">
+              <img src="./stock-portfolio-manager-reactjs/Rebalance-page.png" alt="Rebalance" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Rebalance Page</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- eOrder-Mobile -->
+        <section class="project-section">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">eOrder-Mobile</h2>
+            <span class="tech-badge bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-semibold">Mobile App</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./eorder-mobile/App-store.jpg')">
+              <img src="./eorder-mobile/App-store.jpg" alt="App Store" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">App Store</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./eorder-mobile/Home-Screen.webp')">
+              <img src="./eorder-mobile/Home-Screen.webp" alt="Home Screen" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Home Screen</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./eorder-mobile/Product-Screen.webp')">
+              <img src="./eorder-mobile/Product-Screen.webp" alt="Product Screen" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Product Screen</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./eorder-mobile/Cart-Screen.webp')">
+              <img src="./eorder-mobile/Cart-Screen.webp" alt="Cart Screen" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Cart Screen</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./eorder-mobile/Summary-Screen.webp')">
+              <img src="./eorder-mobile/Summary-Screen.webp" alt="Summary Screen" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">Summary Screen</p>
+              </div>
+            </div>
+            <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./eorder-mobile/More-Screen.webp')">
+              <img src="./eorder-mobile/More-Screen.webp" alt="More Screen" class="w-full h-96 object-contain bg-gray-100" />
+              <div class="p-4">
+                <p class="text-sm font-medium text-gray-700">More Screen</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+      <div class="container mx-auto max-w-7xl px-4 text-center">
+        <p class="text-yellow-400 mb-3 font-medium">⚠️ Some websites are private and confidential for employers only</p>
+        <p class="text-gray-400">&copy; 2024 Portfolio Projects Reference. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="absolute top-4 right-8 text-white text-5xl font-bold cursor-pointer hover:text-gray-300">&times;</span>
+      <img id="modalImage" class="modal-content" src="" alt="Enlarged view" />
+    </div>
+
+    <script>
+      function openModal(imageSrc) {
+        const modal = document.getElementById('imageModal')
+        const modalImg = document.getElementById('modalImage')
+        modal.classList.add('active')
+        modalImg.src = imageSrc
+        document.body.style.overflow = 'hidden'
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('imageModal')
+        modal.classList.remove('active')
+        document.body.style.overflow = 'auto'
+      }
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          closeModal()
+        }
+      })
+    </script>
+  </body>
+</html>
