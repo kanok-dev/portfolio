@@ -49,8 +49,13 @@
   </head>
   <body class="bg-gray-50 min-h-screen">
     <!-- Header -->
-    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-4 shadow-lg">
-      <div class="container mx-auto max-w-7xl">
+    <header class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-4 shadow-lg overflow-hidden">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style="background-image: url('./Cover-FullStack-Image.png')"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80"></div>
+
+      <!-- Content -->
+      <div class="container mx-auto max-w-7xl relative z-10">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">
           <a href="https://kanok-dev.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-200 transition-colors">Portfolio Projects</a>
         </h1>
