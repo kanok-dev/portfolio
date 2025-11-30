@@ -45,6 +45,29 @@
         max-height: 90%;
         object-fit: contain;
       }
+
+      /* Print/PDF Styles */
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .project-section {
+          page-break-after: always;
+          page-break-inside: avoid;
+        }
+        .project-section:last-child {
+          page-break-after: auto;
+        }
+        header {
+          page-break-after: always;
+        }
+        .image-item {
+          page-break-inside: avoid;
+        }
+        body {
+          background: white;
+        }
+      }
     </style>
   </head>
   <body class="bg-gray-50 min-h-screen">
@@ -56,10 +79,23 @@
 
       <!-- Content -->
       <div class="container mx-auto max-w-7xl relative z-10">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-          <a href="https://kanok-dev.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-200 transition-colors">Portfolio Projects</a>
-        </h1>
-        <p class="text-lg md:text-xl text-blue-100">A comprehensive reference of my development projects</p>
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">
+              <a href="https://kanok-dev.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-200 transition-colors">Portfolio Projects</a>
+            </h1>
+            <p class="text-sm md:text-base text-blue-200 mb-2">
+              <a href="https://kanok-dev.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="hover:underline">https://kanok-dev.github.io/portfolio/</a>
+            </p>
+            <p class="text-lg md:text-xl text-blue-100">A comprehensive reference of my development projects</p>
+          </div>
+          <button onclick="exportPDF()" class="no-print bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Export PDF
+          </button>
+        </div>
       </div>
     </header>
 
@@ -419,6 +455,11 @@
           closeModal()
         }
       })
+
+      // Export to PDF
+      function exportPDF() {
+        window.print()
+      }
     </script>
   </body>
 </html>
