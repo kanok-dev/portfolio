@@ -1,0 +1,9 @@
+# Claude Code files
+.claude/
+CLAUDE.md
+
+# macOS
+.DS_Store
+
+# Thumbnails
+._*
