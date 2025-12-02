@@ -16,7 +16,7 @@ except ImportError:
     from PIL import Image
 
 # Configuration
-TARGET_WIDTH = 1080
+TARGET_WIDTH = 1200
 SUPPORTED_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.webp'}
 BASE_DIR = Path(__file__).parent
 
@@ -58,7 +58,7 @@ def resize_image(image_path: Path, target_width: int = TARGET_WIDTH) -> bool:
             resized_img = img.resize((target_width, new_height), Image.Resampling.LANCZOS)
             
             # Preserve image format and save
-            resized_img.save(image_path, quality=90, optimize=True)
+            resized_img.save(image_path, quality=100, optimize=True)
             
             print(f"  ✅ Resized: {image_path.name} ({original_width}x{original_height} → {target_width}x{new_height})")
             return True
