@@ -46,9 +46,33 @@
         object-fit: contain;
       }
 
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Category Navigation */
+      .category-nav {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .category-nav a {
+        transition: all 0.3s ease;
+      }
+      .category-nav a:hover {
+        transform: translateY(-2px);
+      }
+      .category-nav a.active {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+      }
+
       /* Print/PDF Styles */
       @media print {
         .no-print {
+          display: none !important;
+        }
+        .category-nav {
           display: none !important;
         }
         .project-section {
@@ -87,7 +111,7 @@
             <p class="text-sm md:text-base text-blue-200 mb-2">
               <a href="https://kanok-dev.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="hover:underline">https://kanok-dev.github.io/portfolio/</a>
             </p>
-            <p class="text-lg md:text-xl text-blue-100">A comprehensive reference of my development projects</p>
+            <p class="text-lg md:text-xl text-blue-100">10+ years crafting Full-Stack, AI/ML, and Enterprise solutions — from concept to production</p>
           </div>
           <!-- <button onclick="exportPDF()" class="no-print bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,12 +123,44 @@
       </div>
     </header>
 
+    <!-- Category Navigation -->
+    <nav class="category-nav sticky top-0 z-50 bg-white/95 shadow-md py-4 px-4 no-print">
+      <div class="container mx-auto max-w-7xl">
+        <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+          <a href="#web-apps" class="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full font-semibold text-sm hover:bg-blue-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            Web Apps
+          </a>
+          <a href="#ai-ml" class="flex items-center gap-2 px-4 py-2 bg-purple-50 text-purple-700 rounded-full font-semibold text-sm hover:bg-purple-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            AI & ML
+          </a>
+          <a href="#enterprise" class="flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full font-semibold text-sm hover:bg-indigo-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            Enterprise
+          </a>
+          <a href="#mobile-apps" class="flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-full font-semibold text-sm hover:bg-green-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            Mobile Apps
+          </a>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main Content -->
     <main class="container mx-auto max-w-7xl px-4 py-12">
       <!-- Projects Grid -->
       <div id="portfolio-images" class="space-y-16">
         <!-- Web Applications Section -->
-        <div class="mb-8">
+        <div id="web-apps" class="mb-8 scroll-mt-20">
           <div class="flex items-center gap-4 mb-8">
             <div class="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,9 +177,22 @@
         <!-- Stack (NextJs) -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">Stack</h2>
-            <p class="text-gray-500 mb-3">Tournament enrollment platform with admin dashboard, user registration, and comprehensive tournament management system.</p>
-            <span class="tech-badge bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold">NextJs</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">Stack Tournament</h2>
+              <span class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">Full Stack App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Tournament Enrollment Platform with comprehensive admin dashboard for managing competitions and registrations. Features multi-step user registration workflow, tournament bracket management, participant tracking, event scheduling, team
+              organization capabilities, and real-time enrollment status updates. Built for sports organizations and competitive gaming communities requiring streamlined tournament operations.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Next.js</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Prisma</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+              <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-semibold">Tailwind CSS</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stack-nextjs/Admin-Dashboard.png')">
@@ -180,9 +249,22 @@
         <!-- KUGarden (ReactJs) -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">KUGarden</h2>
-            <p class="text-gray-500 mb-3">Social commerce order management system integrating orders from Facebook, TikTok, and Vrish with delivery tracking and QR code slip verification.</p>
-            <span class="tech-badge bg-cyan-100 text-cyan-800 px-4 py-1 rounded-full text-sm font-semibold">ReactJs</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">LogiFlow Pro (KUGarden)</h2>
+              <span class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-3 py-1 rounded-full text-xs font-bold">Full Stack App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Enterprise Logistics & Fulfillment Platform for managing e-commerce fulfillment operations. Serves as a central hub for warehouse operations, order processing, delivery management, and business intelligence reporting. Features
+              multi-channel integration from Facebook, TikTok, and Vrish with NIM Express Tracking, QR code scanning for slip verification, and real-time operational visibility across the entire fulfillment workflow.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 18</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Redux</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Reactstrap</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">React Hook Form</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">NIM Express API</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./kugarden-reactjs/iScreen Shoter - Google Chrome - 681130074528.jpg')">
@@ -209,11 +291,23 @@
         <!-- Kanoks.me (NextJs) -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">
-              <a href="https://kanoks.me" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">Kanoks.me</a>
-            </h2>
-            <p class="text-gray-500 mb-3">Personal portfolio website showcasing development projects, skills, and professional experience.</p>
-            <span class="tech-badge bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold">NextJs</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">
+                <a href="https://kanoks.me" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">Kanoks.me</a>
+              </h2>
+              <span class="bg-gradient-to-r from-gray-600 to-slate-600 text-white px-3 py-1 rounded-full text-xs font-bold">Portfolio Website</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Personal Portfolio Website showcasing 10+ years of full-stack development experience, featuring interactive project galleries, skills visualization, professional timeline, and contact integration. Built with modern Next.js architecture
+              for optimal performance, SEO, and responsive design across all devices. Demonstrates expertise in React ecosystem and modern web development practices.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Next.js</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+              <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-semibold">Tailwind CSS</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Framer Motion</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./kanoks-me-nextjs/Home.png')">
@@ -228,9 +322,21 @@
         <!-- Lotto (NextJs) -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">Lotto</h2>
-            <p class="text-gray-500 mb-3">Lottery ordering platform for consumers with government API integration for processing and verifying lottery bills.</p>
-            <span class="tech-badge bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold">NextJs</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">Lotto Platform</h2>
+              <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">Full Stack App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Lottery Ordering Platform for Thai consumers with government API integration for processing and verifying lottery bills. Features secure order placement, real-time lottery number availability checking, digital ticket management,
+              purchase history tracking, winning verification against official results, and streamlined payment processing for a seamless lottery purchasing experience.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Next.js</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Government API</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./lotto-nextjs/Home.png')">
@@ -245,9 +351,20 @@
         <!-- LuckyNumberMagic (ReactJs) -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">LuckyNumberMagic</h2>
-            <p class="text-gray-500 mb-3">Interactive lucky number generator application with engaging UI for generating and displaying lucky numbers.</p>
-            <span class="tech-badge bg-cyan-100 text-cyan-800 px-4 py-1 rounded-full text-sm font-semibold">ReactJs</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">LuckyNumberMagic</h2>
+              <span class="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold">Web App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Interactive Lucky Number Generator Application with engaging UI animations and Thai numerology integration. Features multiple random number generation algorithms, customizable number ranges, animated reveal effects, history tracking of
+              generated numbers, shareable results, and mobile-responsive design for entertainment and decision-making assistance based on traditional lucky number beliefs.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">JavaScript</span>
+              <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-semibold">CSS Animations</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Responsive Design</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./lucky-number-magic-reactjs/Home.png')">
@@ -262,10 +379,23 @@
         <!-- SmartSales (C# Jquery) -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">SmartSales</h2>
-            <p class="text-gray-500 mb-3">Comprehensive inventory and sales management system with dashboard analytics, stock tracking, and geographical reporting.</p>
-            <span class="tech-badge bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold">C#</span>
-            <span class="tech-badge bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold ml-2">jQuery</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">SmartSales Pro</h2>
+              <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold">Multi-Tenant SaaS</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Enterprise Sales Force Automation Platform with sophisticated database-per-tenant isolation model. Features complete Full Stack solution for field sales operations, customer relationships, and inventory distribution. Includes mobile
+              synchronization services, real-time sales data sync, intelligent promotion management, complex promotional schemes, inventory transfers, and comprehensive financial reporting across multiple distributors and territories.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">.NET 6</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">ASP.NET Core MVC</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">Entity Framework Core</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">jQuery</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">SQL Server</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">AWS S3</span>
+              <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold">SSIS</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./smartsales-csharp-jquery/Dashboard-page.png')">
@@ -304,9 +434,22 @@
         <!-- Sport-Games (NextJs) -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">Sport-Games</h2>
-            <p class="text-gray-500 mb-3">Sports competition management platform with tournament organization, team management, and event registration capabilities.</p>
-            <span class="tech-badge bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold">NextJs</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">USBT Pro</h2>
+              <span class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">Enterprise SaaS</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              University Sports Tournament Management Platform designed for large-scale events supporting 10,000+ concurrent users with high availability. Features mass registration handling for 1,000+ teams, real-time tournament brackets with
+              WebSocket, medal tracking, travel coordination for delegations, multi-sport event management across 50+ disciplines, and comprehensive administrative capabilities for 100+ universities.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Next.js</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Node.js</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">WebSocket</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Redis</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./sport-games-nextjs/Login-Page.jpg')">
@@ -345,9 +488,23 @@
         <!-- Stock Portfolio Manager (ReactJs) -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">Stock Portfolio Manager</h2>
-            <p class="text-gray-500 mb-3">Stock trading portfolio tracker with investment management, performance analytics, DCA calculator, and rebalancing tools.</p>
-            <span class="tech-badge bg-cyan-100 text-cyan-800 px-4 py-1 rounded-full text-sm font-semibold">ReactJs</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">DCAPort Pro</h2>
+              <span class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">Full Stack App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Smart Investment Portfolio Manager designed specifically for Dollar Cost Averaging (DCA) investors. Enables management of multiple US stock portfolios simultaneously, tracks DCA purchases over time, monitors real-time performance via
+              Finnhub API, and provides data-driven rebalancing decisions. Features automatic calculation of portfolio allocations, visual insights into performance trends, and alerts when allocations drift from targets.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 18</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Vite 5</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Zustand</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Node.js</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Finnhub API</span>
+              <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-semibold">Tailwind CSS</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./stock-portfolio-manager-reactjs/Dashboard-page.png')">
@@ -398,9 +555,23 @@
         <!-- Content AI -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">Content AI</h2>
-            <p class="text-gray-500 mb-3">AI-powered content generation platform with blog writer, tools catalog, credit-based system, and subscription management.</p>
-            <span class="tech-badge bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold">NextJs</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">ContentAI Pro</h2>
+              <span class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">SaaS Platform</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              AI-Powered Content Generation SaaS Platform featuring 130+ tools for creating blog posts, social media content, marketing emails, and SEO metadata. Built with multi-tenant architecture supporting credit-based usage system, subscription
+              plans (Free, Starter, Pro, Enterprise), one-time credit packages, generation history with favorites, and OAuth authentication via Google and GitHub.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Next.js</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Prisma</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Stripe</span>
+              <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold">OpenAI API</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./content-ai/01-homepage.png')">
@@ -487,10 +658,21 @@
         <!-- n8n Automation -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">n8n Automation Workflows</h2>
-            <p class="text-gray-500 mb-3">AI-powered automation workflows with intelligent chat bot integration and automated market analysis for business process automation.</p>
-            <span class="tech-badge bg-orange-100 text-orange-800 px-4 py-1 rounded-full text-sm font-semibold">n8n</span>
-            <span class="tech-badge bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold ml-2">AI</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">n8n Automation Workflows</h2>
+              <span class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">Workflow Automation</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              AI-powered automation workflows leveraging n8n for intelligent business process automation. Features intelligent chat bot integration with natural language processing, automated market analysis with multi-source data aggregation,
+              scheduled triggers for recurring tasks, webhook integrations for real-time event processing, and seamless connections to external APIs and services for enterprise workflow orchestration.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">n8n</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">AI/LLM</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Webhooks</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">REST APIs</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">Node.js</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./n8n/ai-chat-bot.jpg')">
@@ -508,8 +690,527 @@
           </div>
         </section>
 
+        <!-- AI & Machine Learning Section -->
+        <div id="ai-ml" class="mb-8 mt-16 pt-8 border-t-2 border-gray-200 scroll-mt-20">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-800">AI & Machine Learning</h2>
+              <p class="text-gray-500">Intelligent systems powered by artificial intelligence</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HelpDesk AI -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">HelpDesk AI</h2>
+              <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold">AI-Powered Platform</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Agentic Customer Support Automation platform combining latest AI advances with practical helpdesk requirements. Features multi-agent workflow with 7 specialized agents (UserAgent, ClassifierAgent, KBSearchAgent, EscalationAgent,
+              LogSearchAgent, ResponseAgent, LoggerAgent), FAISS-powered semantic knowledge retrieval, intelligent ticket routing, and real-time escalation via Redis pub/sub for complex issues requiring human intervention.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Next.js</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">FastAPI</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">LangChain</span>
+              <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-semibold">LangGraph</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">GPT-4</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">FAISS</span>
+              <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold">Redis</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6 border-2 border-dashed border-purple-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-purple-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <p class="text-purple-600 font-medium">Multi-Agent AI System</p>
+                <p class="text-sm text-gray-500 mt-2">7 Specialized Agents</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- GoldMind AI -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">GoldMind AI</h2>
+              <span class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">Multi-Model AI</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Multi-Model Trading Intelligence Platform for XAU/USD gold market analysis. Orchestrates multiple AI engines including OpenAI GPT-4, Anthropic Claude, and Google Gemini to cross-validate insights and provide reliable trading signals.
+              Features autonomous scheduled analysis every 6 hours, news sentiment aggregation from Reuters, Bloomberg, CNBC, MarketWatch, and real-time notifications via LINE Notify for significant market events.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Node.js</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Express.js</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">OpenAI GPT-4</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Claude</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">Gemini</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">LINE Notify</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-6 border-2 border-dashed border-yellow-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+                <p class="text-yellow-600 font-medium">AI Trading Analysis</p>
+                <p class="text-sm text-gray-500 mt-2">Multi-AI Ensemble</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BeverageVision AI -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">BeverageVision AI</h2>
+              <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold">Computer Vision</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Computer Vision Detection Platform leveraging YOLOv5 and YOLO11 architectures for beverage detection and inventory management. Detects 19 different products including Singha, Leo, Chang, Heineken, Tiger, Coca-Cola, Pepsi, Aquafina,
+              Nestle in bottle and can formats. Features real-time image processing with bounding boxes, confidence scores, and categorical breakdowns for retail inventory, shelf monitoring, and compliance checking.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">FastAPI</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">YOLOv5</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">YOLO11</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">PyTorch</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">OpenCV</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-6 border-2 border-dashed border-blue-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-blue-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <p class="text-blue-600 font-medium">Object Detection</p>
+                <p class="text-sm text-gray-500 mt-2">19 Product Classes</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- QuantForge AI -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">QuantForge AI</h2>
+              <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">ML Trading Platform</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Algorithmic Trading Intelligence Platform combining machine learning with quantitative finance for EUR/USD forex trading. Features ensemble ML architecture (Random Forest, XGBoost, Gradient Boosting) achieving 96% accuracy, analysis of
+              24 technical indicators, Backtrader integration for strategy backtesting with Sharpe ratios and drawdown metrics, and automated trade execution with configurable risk management including stop-loss and take-profit levels.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Python</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Scikit-learn</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">XGBoost</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Backtrader</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">Yahoo Finance</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">Exness API</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 border-2 border-dashed border-green-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-green-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  />
+                </svg>
+                <p class="text-green-600 font-medium">ML Trading Engine</p>
+                <p class="text-sm text-gray-500 mt-2">96% Prediction Accuracy</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Enterprise Solutions Section -->
+        <div id="enterprise" class="mb-8 mt-16 pt-8 border-t-2 border-gray-200 scroll-mt-20">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="flex items-center justify-center w-12 h-12 bg-indigo-600 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Enterprise Solutions</h2>
+              <p class="text-gray-500">Large-scale business management systems</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RouteForce Pro -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">RouteForce Pro</h2>
+              <span class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">Multi-Tenant SaaS</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Enterprise Distribution & SFA Platform for CPG/FMCG industries bridging field sales operations with back-office management. Features multi-tenant architecture with distributor-level isolation, 11 offline-first mobile modules with
+              bidirectional sync, complete order-to-cash cycle management, intelligent route planning with GPS tracking, multi-location inventory management, trade promotions, and comprehensive financial collections handling.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Node.js</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Express</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">Redis</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">React Native</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-indigo-50 to-blue-50 rounded-lg p-6 border-2 border-dashed border-indigo-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-indigo-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                  />
+                </svg>
+                <p class="text-indigo-600 font-medium">Distribution Management</p>
+                <p class="text-sm text-gray-500 mt-2">11 Offline Modules</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SmartESM Backoffice -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">SmartESM Backoffice</h2>
+              <span class="bg-gradient-to-r from-teal-500 to-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">Full Stack App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Enterprise Sales Management Platform for consumer goods companies managing field operations with precision. Features granular monitoring of shelf conditions, pricing accuracy, promotional compliance, and inventory availability. Supports
+              multi-level geographic hierarchies, diverse product portfolios, perfect store execution with planogram compliance checking, and comprehensive price monitoring with role-based access control.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 18</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Node.js</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Express</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">MariaDB</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">SQL Server</span>
+              <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold">Redis</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-teal-50 to-green-50 rounded-lg p-6 border-2 border-dashed border-teal-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-teal-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <p class="text-teal-600 font-medium">Retail Execution</p>
+                <p class="text-sm text-gray-500 mt-2">Perfect Store Analytics</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ODMS Pro -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">ODMS Pro</h2>
+              <span class="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold">Enterprise EDI</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Order & Delivery Management System for suppliers working with major Thai retail chains. Serves as centralized hub for EDI document processing supporting 8 major retailers (7-Eleven, Makro, BigC, CP Retail, The Mall, MaxValue, Tops,
+              Villa Market). Features automated workflows replacing manual data entry, multi-partner complexity management, delivery lifecycle tracking with proof-of-delivery, and comprehensive audit compliance with approval chains.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">ASP.NET Core</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Entity Framework</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">SQL Server</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">EDI Processing</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Retail APIs</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg p-6 border-2 border-dashed border-orange-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-orange-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+                <p class="text-orange-600 font-medium">EDI Integration</p>
+                <p class="text-sm text-gray-500 mt-2">8 Retail Partners</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- NurseShip -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">NurseShip</h2>
+              <span class="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-3 py-1 rounded-full text-xs font-bold">Multi-Tenant SaaS</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Healthcare Workforce Management Platform for hospitals and medical facilities in Thailand. Features multi-tenant architecture with complete data isolation, nursing staff schedule management, shift assignments, attendance tracking,
+              automated booking workflows, and flexible shift swap mechanisms. Supports multiple hospitals as independent tenants with department-level organization and comprehensive role-based access control.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Next.js 15</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 19</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Prisma</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">MySQL</span>
+              <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-semibold">Tailwind CSS 4</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-pink-50 to-rose-50 rounded-lg p-6 border-2 border-dashed border-pink-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-pink-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                <p class="text-pink-600 font-medium">Healthcare Management</p>
+                <p class="text-sm text-gray-500 mt-2">Multi-Hospital Support</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- NEO Services -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">NEO Services</h2>
+              <span class="bg-gradient-to-r from-slate-500 to-gray-600 text-white px-3 py-1 rounded-full text-xs font-bold">Database Monitoring SaaS</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Enterprise Database Health Monitoring Platform for overseeing multiple SQL Server databases simultaneously. Features proactive transaction integrity monitoring, invoice sequence validation, duplicate detection, and automated anomaly
+              alerting via LINE messaging. Supports custom schedules per database, centralized dashboard for health status visualization, and Redis-powered duplicate notification prevention for operational efficiency.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 19</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Node.js</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Express</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">SQL Server</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+              <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold">Redis</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">LINE API</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-slate-50 to-gray-100 rounded-lg p-6 border-2 border-dashed border-slate-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-slate-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                </svg>
+                <p class="text-slate-600 font-medium">Database Monitoring</p>
+                <p class="text-sm text-gray-500 mt-2">Multi-DB Health Checks</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VeriSmart Pro -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">VeriSmart Pro</h2>
+              <span class="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">Multi-Tenant SaaS</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Device Maintenance & Warranty Tracking Platform for managing device maintenance operations with distributor multi-tenancy. Features warranty lifecycle management, service ticket management with priority-based workflows, detailed audit
+              trails, company-based tenant isolation, configurable ticket numbering schemes per tenant, and comprehensive file management for attachments and documents with role-based data access control.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Serverless</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">SQL Server</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">JWT Auth</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">File Storage</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-violet-50 to-purple-50 rounded-lg p-6 border-2 border-dashed border-violet-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-violet-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+                <p class="text-violet-600 font-medium">Warranty Management</p>
+                <p class="text-sm text-gray-500 mt-2">Multi-Distributor Support</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SmartRedeem Pro -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">SmartRedeem Pro</h2>
+              <span class="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold">Full Stack App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              B2B Loyalty Points Redemption Platform with dual database architecture connecting to ERP systems. Features automated point calculation from invoice amounts, customer-facing mobile-optimized views, administrative back-office dashboards
+              for rewards ecosystem management, real-time point balance updates, expiration date tracking, redemption history, and multi-distributor role-based access control with hierarchical data management.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Next.js 9</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 16</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Redux</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">Ant Design</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">MySQL</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">MSSQL</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg p-6 border-2 border-dashed border-amber-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-amber-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <p class="text-amber-600 font-medium">Loyalty Rewards</p>
+                <p class="text-sm text-gray-500 mt-2">Dual Database ERP</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TravelExpense Pro -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">TravelExpense Pro</h2>
+              <span class="bg-gradient-to-r from-sky-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">Enterprise Solution</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Enterprise Travel & Expense Management System streamlining business travel planning and expense reimbursement. Features multi-level approval workflows with policy enforcement, digital expense submission with receipt attachments,
+              automated calculations and validations, SAP integration for accounts payable processing, complete audit trail with timestamped approvals, and real-time expense status visibility for employees.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Next.js 14</span>
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 18</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Express.js</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Sequelize</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">SQL Server</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">SAP Integration</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-sky-50 to-blue-50 rounded-lg p-6 border-2 border-dashed border-sky-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-sky-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+                <p class="text-sky-600 font-medium">Expense Management</p>
+                <p class="text-sm text-gray-500 mt-2">SAP Integration</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MongkolPlate -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">MongkolPlate</h2>
+              <span class="bg-gradient-to-r from-red-500 to-rose-500 text-white px-3 py-1 rounded-full text-xs font-bold">Full Stack App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Thai Auspicious License Plate Analyzer bridging ancient numerology wisdom with modern technology. Features 5 distinct Thai astrological calculation methodologies, birthday integration for personalized analysis, comprehensive warning
+              system for problematic number combinations, Excel export functionality, physics-based Framer Motion animations, and responsive design for license plate number range analysis and exploration.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 19</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Vite 7</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Tailwind CSS</span>
+              <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-semibold">Framer Motion</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">ExcelJS</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-red-50 to-rose-50 rounded-lg p-6 border-2 border-dashed border-red-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-red-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                  />
+                </svg>
+                <p class="text-red-600 font-medium">Thai Numerology</p>
+                <p class="text-sm text-gray-500 mt-2">5 Calculation Methods</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ThaiDine Finder -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">ThaiDine Finder</h2>
+              <span class="bg-gradient-to-r from-emerald-500 to-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">Full Stack App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Location-Based Restaurant Discovery Platform for Thailand using Google Places API integration. Features intelligent grid-based search algorithm for comprehensive geographic coverage, province/district/sub-district level queries,
+              automatic geocoding of Thai administrative divisions, rate limiting awareness, Excel export for business users, and JWT-based authentication with stateless design for horizontal scaling readiness.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 18</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Node.js</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Express</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">Google Places API</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Geocoding API</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">JWT</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-emerald-50 to-green-50 rounded-lg p-6 border-2 border-dashed border-emerald-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-emerald-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <p class="text-emerald-600 font-medium">Restaurant Discovery</p>
+                <p class="text-sm text-gray-500 mt-2">Grid-Based Search</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Mobile Applications Section -->
-        <div class="mb-8 mt-16 pt-8 border-t-2 border-gray-200">
+        <div id="mobile-apps" class="mb-8 mt-16 pt-8 border-t-2 border-gray-200 scroll-mt-20">
           <div class="flex items-center gap-4 mb-8">
             <div class="flex items-center justify-center w-12 h-12 bg-green-600 rounded-lg">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -526,9 +1227,22 @@
         <!-- eOrder-Mobile -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">eOrder-Mobile</h2>
-            <p class="text-gray-500 mb-3">Mobile ordering application for seamless commerce with product browsing, cart management, and order history tracking.</p>
-            <span class="tech-badge bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-semibold">Mobile App</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">eOrder Mobile</h2>
+              <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">Cross-Platform Mobile</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Enterprise B2B/B2C Commerce Platform built with React Native 0.76+ delivering seamless ordering experiences. Features offline-first architecture, advanced product catalog management, intelligent shopping cart, complete order lifecycle
+              management, QR code-based asset verification, push notifications via Firebase Cloud Messaging, and multi-language internationalization supporting Thai, English, Japanese, and Lao languages.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React Native 0.76</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Redux Toolkit</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">React Navigation v7</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">Firebase FCM</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">i18n</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./eorder-mobile/eorder/1-splash-screen.png')">
@@ -585,9 +1299,22 @@
         <!-- Merchandiser Mobile App -->
         <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">Merchandiser</h2>
-            <p class="text-gray-500 mb-3">Field merchandiser mobile app for retail management with schedule tracking, customer visits, price checking, and survey questionnaires.</p>
-            <span class="tech-badge bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-semibold">Mobile App</span>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">SmartESM Mobile</h2>
+              <span class="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-3 py-1 rounded-full text-xs font-bold">Cross-Platform Mobile</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Field Sales Management Platform built with React Native 0.82 for merchandisers and field agents working directly with retail customers. Features offline-first architecture with automatic sync, real-time data collection, GPS tracking,
+              camera capture for photo verification, structured data entry with validation, intelligent scheduling, and location-based routing. Bridges field operations with back-office systems seamlessly.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React Native 0.82</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">MobX State Tree</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">AsyncStorage</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">GPS Tracking</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Camera API</span>
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="image-item project-card bg-white rounded-lg overflow-hidden shadow-md" onclick="openModal('./merchandiser-mobile-app/1-splash-screen.png')">
@@ -664,6 +1391,111 @@
             </div>
           </div>
         </section>
+
+        <!-- PJP Mobile -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">PJP Mobile</h2>
+              <span class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">Cross-Platform Mobile</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Field Sales Performance & Coaching Platform built with React Native 0.79 for managing daily activities, store visits, and performance reviews. Features multi-role hierarchy support (Representatives, Supervisors, Managers, Area
+              Managers), GPS tracking, photo documentation, survey modules, one-on-one coaching sessions (Work With), MMKV persistence for offline capabilities, and bilingual support (English/Thai).
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React Native 0.79</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">MobX State Tree</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">MMKV</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">i18next</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">GPS Tracking</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border-2 border-dashed border-blue-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-blue-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-blue-600 font-medium">Sales Performance</p>
+                <p class="text-sm text-gray-500 mt-2">Multi-Role Hierarchy</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FieldForce Pro -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">FieldForce Pro</h2>
+              <span class="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold">Cross-Platform Mobile</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Mobile Sales Force Automation Platform for distribution and retail businesses. Features offline-first architecture with real-time sync, complete sales workflow from pre-call planning to post-visit reporting, customer relationship
+              management, order processing, inventory management, multi-payment collection (cash, cheque, bank deposit) with image verification, promotion management, and GPS-based visit tracking.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React Native</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Redux</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">SQLite</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">GPS</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Camera</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg p-6 border-2 border-dashed border-orange-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-orange-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <p class="text-orange-600 font-medium">Field Sales Automation</p>
+                <p class="text-sm text-gray-500 mt-2">Offline-First Architecture</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- NotifyHub Pro -->
+        <section class="project-section bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="text-3xl font-bold text-gray-800">NotifyHub Pro</h2>
+              <span class="bg-gradient-to-r from-purple-500 to-violet-500 text-white px-3 py-1 rounded-full text-xs font-bold">Full Stack App</span>
+            </div>
+            <p class="text-gray-500 mb-4">
+              Multi-Channel Notification Management System bridging distributors and customers in e-commerce. Features dual-channel delivery via Firebase Cloud Messaging and LINE Messaging API, automated order date reminders, holiday schedule
+              notifications, product availability alerts, centralized management dashboard for customer monitoring, notification scheduling, and device management with targeting capabilities across multi-database architecture.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React</span>
+              <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Node.js</span>
+              <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Express</span>
+              <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">Firebase FCM</span>
+              <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">LINE API</span>
+              <span class="tech-badge bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">SQL Server</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-gradient-to-br from-purple-50 to-violet-50 rounded-lg p-6 border-2 border-dashed border-purple-200">
+              <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-purple-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                  />
+                </svg>
+                <p class="text-purple-600 font-medium">Push Notifications</p>
+                <p class="text-sm text-gray-500 mt-2">Multi-Channel Delivery</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -707,6 +1539,38 @@
       function exportPDF() {
         window.print()
       }
+
+      // Active navigation highlight on scroll
+      const sections = document.querySelectorAll('#web-apps, #ai-ml, #enterprise, #mobile-apps')
+      const navLinks = document.querySelectorAll('.category-nav a')
+
+      function updateActiveNav() {
+        let current = ''
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop
+          const sectionHeight = section.offsetHeight
+          if (window.scrollY >= sectionTop - 100) {
+            current = section.getAttribute('id')
+          }
+        })
+
+        navLinks.forEach((link) => {
+          link.classList.remove('active', 'bg-blue-50', 'text-blue-700', 'bg-purple-50', 'text-purple-700', 'bg-indigo-50', 'text-indigo-700', 'bg-green-50', 'text-green-700')
+          const href = link.getAttribute('href').substring(1)
+          if (href === current) {
+            link.classList.add('active')
+          } else {
+            // Restore original colors based on section
+            if (href === 'web-apps') link.classList.add('bg-blue-50', 'text-blue-700')
+            if (href === 'ai-ml') link.classList.add('bg-purple-50', 'text-purple-700')
+            if (href === 'enterprise') link.classList.add('bg-indigo-50', 'text-indigo-700')
+            if (href === 'mobile-apps') link.classList.add('bg-green-50', 'text-green-700')
+          }
+        })
+      }
+
+      window.addEventListener('scroll', updateActiveNav)
+      window.addEventListener('load', updateActiveNav)
     </script>
   </body>
 </html>
