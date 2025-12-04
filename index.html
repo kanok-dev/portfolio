@@ -51,6 +51,32 @@
         scroll-behavior: smooth;
       }
 
+      /* Stats Animation */
+      .stat-item {
+        transition: transform 0.3s ease;
+      }
+      .stat-item:hover {
+        transform: scale(1.05);
+      }
+
+      /* Tech Icon Grid */
+      .tech-icon {
+        transition: all 0.3s ease;
+      }
+      .tech-icon:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Hide scrollbar for tech stack */
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
       /* Category Navigation */
       .category-nav {
         backdrop-filter: blur(10px);
@@ -96,22 +122,22 @@
   </head>
   <body class="bg-gray-50 min-h-screen">
     <!-- Header -->
-    <header class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-4 shadow-lg overflow-hidden">
+    <header class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8 md:py-12 px-6 md:px-4 shadow-lg overflow-hidden">
       <!-- Background Image with Overlay -->
       <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style="background-image: url('./Cover-FullStack-Image.png')"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80"></div>
 
       <!-- Content -->
-      <div class="container mx-auto max-w-7xl relative z-10">
+      <div class="container mx-auto max-w-7xl relative z-10 px-2">
         <div class="flex justify-between items-center">
-          <div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-2">
+          <div class="pr-4">
+            <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
               <a href="https://kanok-dev.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-200 transition-colors">Portfolio Projects</a>
             </h1>
-            <p class="text-sm md:text-base text-blue-200 mb-2">
+            <p class="text-xs sm:text-sm md:text-base text-blue-200 mb-2 break-all sm:break-normal">
               <a href="https://kanok-dev.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="hover:underline">https://kanok-dev.github.io/portfolio/</a>
             </p>
-            <p class="text-lg md:text-xl text-blue-100">10+ years crafting Full-Stack, AI/ML, and Enterprise solutions — from concept to production</p>
+            <p class="text-sm sm:text-base md:text-xl text-blue-100 leading-relaxed">10+ years crafting Full-Stack, AI/ML, and Enterprise solutions</p>
           </div>
           <!-- <button onclick="exportPDF()" class="no-print bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -124,36 +150,112 @@
     </header>
 
     <!-- Category Navigation -->
-    <nav class="category-nav sticky top-0 z-50 bg-white/95 shadow-md py-4 px-4 no-print">
+    <nav class="category-nav sticky top-0 z-50 bg-white/95 shadow-md py-3 md:py-4 px-2 md:px-4 no-print">
       <div class="container mx-auto max-w-7xl">
-        <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-          <a href="#web-apps" class="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full font-semibold text-sm hover:bg-blue-100">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+          <a href="#web-apps" class="flex items-center gap-1 md:gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-blue-50 text-blue-700 rounded-full font-semibold text-xs md:text-sm hover:bg-blue-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
             </svg>
-            Web Apps
+            <span class="hidden sm:inline">Web Apps</span>
+            <span class="sm:hidden">Web</span>
           </a>
-          <a href="#ai-ml" class="flex items-center gap-2 px-4 py-2 bg-purple-50 text-purple-700 rounded-full font-semibold text-sm hover:bg-purple-100">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <a href="#ai-ml" class="flex items-center gap-1 md:gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-purple-50 text-purple-700 rounded-full font-semibold text-xs md:text-sm hover:bg-purple-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            AI & ML
+            <span>AI/ML</span>
           </a>
-          <a href="#enterprise" class="flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full font-semibold text-sm hover:bg-indigo-100">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <a href="#enterprise" class="flex items-center gap-1 md:gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-indigo-50 text-indigo-700 rounded-full font-semibold text-xs md:text-sm hover:bg-indigo-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
-            Enterprise
+            <span class="hidden sm:inline">Enterprise</span>
+            <span class="sm:hidden">Biz</span>
           </a>
-          <a href="#mobile-apps" class="flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-full font-semibold text-sm hover:bg-green-100">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <a href="#mobile-apps" class="flex items-center gap-1 md:gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-green-50 text-green-700 rounded-full font-semibold text-xs md:text-sm hover:bg-green-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
-            Mobile Apps
+            <span class="hidden sm:inline">Mobile Apps</span>
+            <span class="sm:hidden">Mobile</span>
           </a>
         </div>
       </div>
     </nav>
+
+    <!-- Stats Section -->
+    <section class="bg-white border-b border-gray-100 py-6 md:py-8 no-print">
+      <div class="container mx-auto max-w-7xl px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          <div class="stat-item text-center p-2 md:p-4">
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-0.5 md:mb-1">30+</div>
+            <div class="text-xs sm:text-sm text-gray-500 font-medium">Projects</div>
+          </div>
+          <div class="stat-item text-center p-2 md:p-4">
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-600 mb-0.5 md:mb-1">10+</div>
+            <div class="text-xs sm:text-sm text-gray-500 font-medium">Years Exp.</div>
+          </div>
+          <div class="stat-item text-center p-2 md:p-4">
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo-600 mb-0.5 md:mb-1">50+</div>
+            <div class="text-xs sm:text-sm text-gray-500 font-medium">Clients</div>
+          </div>
+          <div class="stat-item text-center p-2 md:p-4">
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-green-600 mb-0.5 md:mb-1">100K+</div>
+            <div class="text-xs sm:text-sm text-gray-500 font-medium">Users</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="bg-gray-50 py-6 md:py-10 no-print">
+      <div class="container mx-auto max-w-7xl px-4">
+        <h3 class="text-center text-gray-400 text-xs md:text-sm font-semibold uppercase tracking-wider mb-4 md:mb-6">Technologies I Work With</h3>
+        <div class="grid grid-cols-5 sm:grid-cols-5 md:flex md:flex-wrap md:justify-center items-center gap-2 md:gap-4">
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">⚛️</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">React</span>
+          </div>
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">▲</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">Next.js</span>
+          </div>
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">🟢</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">Node</span>
+          </div>
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">🐍</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">Python</span>
+          </div>
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">🔷</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">.NET</span>
+          </div>
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">📱</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">RN</span>
+          </div>
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">🐘</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">PG</span>
+          </div>
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">🤖</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">AI</span>
+          </div>
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">☁️</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">AWS</span>
+          </div>
+          <div class="tech-icon bg-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-2">
+            <span class="text-base md:text-2xl">🐳</span>
+            <span class="text-[10px] md:text-sm font-medium text-gray-700">Docker</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Main Content -->
     <main class="container mx-auto max-w-7xl px-4 py-12">
@@ -1499,11 +1601,50 @@
       </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 mt-16">
+    <!-- Contact CTA Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-10 md:py-16 no-print">
       <div class="container mx-auto max-w-7xl px-4 text-center">
-        <p class="text-yellow-400 mb-3 font-medium">⚠️ Some websites are private and confidential for employers only</p>
-        <p class="text-gray-400">&copy; 2024 Portfolio Projects Reference. All rights reserved.</p>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">Interested in Working Together?</h2>
+        <p class="text-blue-100 text-sm sm:text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto px-2">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 px-4 sm:px-0">
+          <a
+            href="https://kanok-dev.github.io/portfolio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold text-sm md:text-base hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+            View Full Portfolio
+          </a>
+          <a
+            href="mailto:contact@kanoks.me"
+            class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold text-sm md:text-base hover:bg-white/10 transition-all"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto max-w-7xl px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="text-center md:text-left">
+            <p class="text-gray-400 text-sm">&copy; 2024 Kanok's Portfolio. All rights reserved.</p>
+          </div>
+          <div class="flex items-center gap-2 text-yellow-400 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            <span>Some projects are confidential for employers only</span>
+          </div>
+        </div>
       </div>
     </footer>
 
