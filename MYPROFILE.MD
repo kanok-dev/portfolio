@@ -6,13 +6,13 @@ I am a Senior Full-Stack Engineer who builds production-ready systems, not just 
 
 ✅ Full-Stack Web & SaaS Development
 
- - Frontend: React.js, Next.js (App Router), TypeScript, Tailwind CSS, Shadcn/ui, Material UI
+ - Frontend: React.js 18/19, Next.js 14/15 (App Router), TypeScript, Tailwind CSS 4, Shadcn/ui, Material UI, Framer Motion
 
- - Backend: Node.js (Express, NestJS), Python (FastAPI), Zod, tRPC, REST & GraphQL APIs
+ - Backend: Node.js (Express, NestJS), Python (FastAPI), .NET 6/Core (Entity Framework), Zod, tRPC, REST & GraphQL APIs
 
-- Databases: PostgreSQL, MongoDB, Redis, SQL Server, Prisma, TypeORM
+- Databases: PostgreSQL, MySQL, MongoDB, Redis, SQL Server, Prisma, TypeORM, Sequelize
 
-- Mobile: React Native (Expo & CLI), Offline-first Architecture, Native Modules
+- Mobile: React Native 0.76+ (Expo & CLI), Offline-first Architecture, Firebase FCM, Multi-language i18n
 
 
 🔒 DevOps, Cloud & Security
@@ -28,20 +28,24 @@ I am a Senior Full-Stack Engineer who builds production-ready systems, not just 
 
 🤖 Specialized AI Engineering & Workflow
 
-- AI Integration: OpenAI API (GPT-4), Anthropic Claude, Vercel AI SDK
+- AI Integration: OpenAI API (GPT-4), Anthropic Claude, Google Gemini, Multi-AI Ensemble Architecture, Vercel AI SDK
 
-- AI Agents & RAG: LangChain, Vector Databases (Pinecone/Supabase), Semantic Search
+- AI Agents & RAG: LangChain, LangGraph, Multi-Agent Workflows (7+ specialized agents), FAISS, Pinecone, Semantic Search
+
+- Computer Vision & ML: YOLOv5, YOLO11, PyTorch, OpenCV, Ensemble ML (Random Forest, XGBoost, Gradient Boosting)
 
 - AI-Augmented Coding: Expert in using GitHub Copilot, Claude Code & MCP to speed up development by 2x while maintaining 100% human-verified code quality.
 
 
 💡 Proven Results
 
-🚀 Shipped 20+ Production Apps: From FinTech payment gateways to high-load SaaS platforms.
+🚀 Shipped 30+ Production Apps: From FinTech payment gateways to enterprise distribution systems serving 100K+ users.
 
-📈 Scalable Architecture: Built systems supporting high concurrency using Node.js and Redis.
+📈 Scalable Architecture: Built multi-tenant SaaS platforms supporting 10,000+ concurrent users with WebSocket real-time updates.
 
-🤖 AI Innovation: Integrated LLM agents to automate customer workflows and content generation.
+🤖 AI Innovation: Built ML trading systems with 96% prediction accuracy, multi-agent helpdesk AI, and computer vision detection for 19+ product classes.
+
+🏢 Enterprise Integration: EDI systems connecting 8 major Thai retailers (7-Eleven, Makro, BigC, Tops, etc.)
 
 
 🌟 Why Choose Me?
@@ -58,4 +62,4 @@ I am a Senior Full-Stack Engineer who builds production-ready systems, not just 
 ✅ Ready to build a scalable, intelligent platform? Click "Invite" or message me to discuss your roadmap. I am available for full-time engagements.
 
 
-🔑 Keywords for Search Senior Full-Stack Developer, React Native, AI Engineer, DevOps, Node.js, Next.js, TypeScript, AWS, Docker, CI/CD, SaaS, API Integration, OpenAI, LangChain, LLM, Vector Database, Automation, Python, Payment Gateway, Enterprise Software.
+🔑 Keywords for Search Senior Full-Stack Developer, React Native, AI Engineer, ML Engineer, DevOps, Node.js, Next.js 15, TypeScript, Python, FastAPI, .NET Core, AWS, Docker, CI/CD, SaaS, Multi-Tenant, API Integration, OpenAI, GPT-4, Claude, Gemini, LangChain, LangGraph, LLM, Vector Database, FAISS, Computer Vision, YOLO, PyTorch, Automation, Payment Gateway, Enterprise Software, React 19, Prisma, PostgreSQL, Redis, WebSocket.
