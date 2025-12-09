@@ -23,7 +23,7 @@ NurseShip is architected as a complete full-stack solution, combining both front
 
 ## Software Overview
 
-NurseShip is a comprehensive healthcare workforce management platform designed specifically for hospitals and medical facilities in Thailand. The system streamlines the complex process of managing nursing staff schedules, shift assignments, attendance tracking, and administrative operations across multiple healthcare facilities.
+NurseShip is a comprehensive healthcare workforce management platform designed specifically for hospitals and medical facilities. The system streamlines the complex process of managing nursing staff schedules, shift assignments, attendance tracking, and administrative operations across multiple healthcare facilities.
 
 Built with modern web technologies, NurseShip serves as a centralized hub where hospital administrators, head nurses, and nursing staff can collaborate efficiently. The platform addresses the unique challenges of healthcare shift management by providing real-time visibility into staffing needs, automated booking workflows, and flexible shift swap mechanisms that maintain operational continuity while respecting staff preferences.
 

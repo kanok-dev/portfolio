@@ -86,13 +86,21 @@
       }
 
       @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
 
       @keyframes zoomIn {
-        from { transform: scale(0.8); }
-        to { transform: scale(1); }
+        from {
+          transform: scale(0.8);
+        }
+        to {
+          transform: scale(1);
+        }
       }
 
       /* Sticky Navigation */
@@ -255,17 +263,12 @@
     </style>
   </head>
   <body class="bg-gray-50 text-gray-900">
-
     <!-- Hero Section -->
     <header class="hero-gradient text-white py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
-            Senior Full-Stack & AI Engineer
-          </h1>
-          <p class="text-xl md:text-2xl mb-6 font-light opacity-95">
-            10+ Years Experience | SaaS Architect | AI Integrator | Mobile Expert
-          </p>
+          <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Senior Full-Stack & AI Engineer</h1>
+          <p class="text-xl md:text-2xl mb-6 font-light opacity-95">10+ Years Experience | SaaS Architect | AI Integrator | Mobile Expert</p>
 
           <!-- Stats -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
@@ -294,28 +297,17 @@
     <nav class="sticky-nav no-print">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex flex-wrap justify-center gap-2 md:gap-4">
-          <a href="#saas" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition">
-            🏢 SaaS (10)
-          </a>
-          <a href="#ai-ml" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition">
-            🤖 AI & ML (4)
-          </a>
-          <a href="#mobile" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition">
-            📱 Mobile (4)
-          </a>
-          <a href="#fintech" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition">
-            💹 FinTech (3)
-          </a>
-          <a href="#tools" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition">
-            🛠️ Tools (4)
-          </a>
+          <a href="#saas" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 🏢 SaaS (10) </a>
+          <a href="#ai-ml" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 🤖 AI & ML (4) </a>
+          <a href="#mobile" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 📱 Mobile (4) </a>
+          <a href="#fintech" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 💹 FinTech (3) </a>
+          <a href="#tools" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 🛠️ Tools (4) </a>
         </div>
       </div>
     </nav>
 
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
       <!-- Category 1: Enterprise SaaS & Cloud Platforms -->
       <section id="saas" class="category-section mb-20">
         <div class="mb-8">
@@ -327,7 +319,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-
           <!-- Project 1: RouteForce Pro -->
           <article class="project-card rounded-xl p-6 md:p-8">
             <div class="flex flex-col h-full">
@@ -343,13 +334,9 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Distributors needed centralized inventory, sales, and logistics management with strict tenant data isolation.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Distributors needed centralized inventory, sales, and logistics management with strict tenant data isolation.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Designed Database-per-Tenant architecture with complete ERP-lite suite covering Order-to-Cash and Promotion engines.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Designed Database-per-Tenant architecture with complete ERP-lite suite covering Order-to-Cash and Promotion engines.</div>
 
               <span class="impact-pill">Thousands of daily transactions per tenant</span>
             </div>
@@ -370,29 +357,25 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Handle massive traffic spikes (10,000+ concurrent users) during national tournament registrations.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Handle massive traffic spikes (10,000+ concurrent users) during national tournament registrations.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Architected Cloud-Native solution with Cloudflare R2 and GraphQL Subscriptions for real-time score updates.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Architected Cloud-Native solution with Cloudflare R2 and GraphQL Subscriptions for real-time score updates.</div>
 
               <span class="impact-pill">Zero downtime during 50+ sports disciplines</span>
 
               <!-- Screenshots -->
               <div class="screenshot-gallery">
                 <div class="screenshot-thumb" onclick="openModal('stack-nextjs/Home.png')">
-                  <img src="stack-nextjs/Home.png" alt="Homepage" loading="lazy">
+                  <img src="stack-nextjs/Home.png" alt="Homepage" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('stack-nextjs/Enroll-Page-1.png')">
-                  <img src="stack-nextjs/Enroll-Page-1.png" alt="Enrollment Page" loading="lazy">
+                  <img src="stack-nextjs/Enroll-Page-1.png" alt="Enrollment Page" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('stack-nextjs/Admin-Dashboard.png')">
-                  <img src="stack-nextjs/Admin-Dashboard.png" alt="Admin Dashboard" loading="lazy">
+                  <img src="stack-nextjs/Admin-Dashboard.png" alt="Admin Dashboard" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('stack-nextjs/Admin-Tournament.png')">
-                  <img src="stack-nextjs/Admin-Tournament.png" alt="Tournament Management" loading="lazy">
+                  <img src="stack-nextjs/Admin-Tournament.png" alt="Tournament Management" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -412,29 +395,25 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Field sales teams (Nestle, Pepsi) needed offline sync with conflict resolution for massive datasets.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Field sales teams (Nestle, Pepsi) needed offline sync with conflict resolution for massive datasets.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Built Bidirectional Sync Engine with conflict resolution and delta updates for thousands of SKUs.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Built Bidirectional Sync Engine with conflict resolution and delta updates for thousands of SKUs.</div>
 
               <span class="impact-pill">Trusted by Fortune 500 clients</span>
 
               <!-- Screenshots -->
               <div class="screenshot-gallery">
                 <div class="screenshot-thumb" onclick="openModal('smartsales-csharp-jquery/Dashboard-page.png')">
-                  <img src="smartsales-csharp-jquery/Dashboard-page.png" alt="Dashboard" loading="lazy">
+                  <img src="smartsales-csharp-jquery/Dashboard-page.png" alt="Dashboard" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('smartsales-csharp-jquery/Map-Report-page.png')">
-                  <img src="smartsales-csharp-jquery/Map-Report-page.png" alt="Map Reports" loading="lazy">
+                  <img src="smartsales-csharp-jquery/Map-Report-page.png" alt="Map Reports" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('smartsales-csharp-jquery/Stock-In-page.png')">
-                  <img src="smartsales-csharp-jquery/Stock-In-page.png" alt="Stock Management" loading="lazy">
+                  <img src="smartsales-csharp-jquery/Stock-In-page.png" alt="Stock Management" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('smartsales-csharp-jquery/Reports-page.jpg')">
-                  <img src="smartsales-csharp-jquery/Reports-page.jpg" alt="Reports" loading="lazy">
+                  <img src="smartsales-csharp-jquery/Reports-page.jpg" alt="Reports" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -454,15 +433,54 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Hospitals struggled with complex shift scheduling, swapping, and attendance tracking for nursing staff.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Hospitals struggled with complex shift scheduling, swapping, and attendance tracking for nursing staff.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Developed peer-to-peer shift swapping platform with head nurse approval workflows.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Developed peer-to-peer shift swapping platform with head nurse approval workflows.</div>
 
               <span class="impact-pill">Improved staff satisfaction via flexible scheduling</span>
+
+              <!-- Screenshots -->
+              <div class="screenshot-gallery">
+                <div class="screenshot-thumb" onclick="openModal('nurseship/1-nurseship-login.png')">
+                  <img src="nurseship/1-nurseship-login.png" alt="Login Page" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/2-nurseship-dashboard.png')">
+                  <img src="nurseship/2-nurseship-dashboard.png" alt="Dashboard" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/3-nurseship-shift-calendar.png')">
+                  <img src="nurseship/3-nurseship-shift-calendar.png" alt="Shift Calendar" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/4-nurseship-my-bookings.png')">
+                  <img src="nurseship/4-nurseship-my-bookings.png" alt="My Bookings" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/5-nurseship-shift-swaps.png')">
+                  <img src="nurseship/5-nurseship-shift-swaps.png" alt="Shift Swaps" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/6-nurseship-notifications.png')">
+                  <img src="nurseship/6-nurseship-notifications.png" alt="Notifications" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/7-nurseship-head-nurse-team-dashboard.png')">
+                  <img src="nurseship/7-nurseship-head-nurse-team-dashboard.png" alt="Head Nurse Dashboard" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/8-nurseship-admin-dashboard.png')">
+                  <img src="nurseship/8-nurseship-admin-dashboard.png" alt="Admin Dashboard" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/9-nurseship-admin-hospital-management.png')">
+                  <img src="nurseship/9-nurseship-admin-hospital-management.png" alt="Hospital Management" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/10-nurseship-admin-departments-mangement.png')">
+                  <img src="nurseship/10-nurseship-admin-departments-mangement.png" alt="Department Management" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/11-nurseship-admin-users-mangement.png')">
+                  <img src="nurseship/11-nurseship-admin-users-mangement.png" alt="User Management" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/12-nurseship-shift-management.png')">
+                  <img src="nurseship/12-nurseship-shift-management.png" alt="Shift Management" loading="lazy" />
+                </div>
+                <div class="screenshot-thumb" onclick="openModal('nurseship/13-nurseship-create-new-shift.png')">
+                  <img src="nurseship/13-nurseship-create-new-shift.png" alt="Create New Shift" loading="lazy" />
+                </div>
+              </div>
             </div>
           </article>
 
@@ -481,13 +499,9 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Real-time visibility into thousands of simultaneous field sales activities (shelf checks, pricing).
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Real-time visibility into thousands of simultaneous field sales activities (shelf checks, pricing).</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Built high-performance dashboard with Redis Caching for heavy read loads and dynamic route planning tools.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Built high-performance dashboard with Redis Caching for heavy read loads and dynamic route planning tools.</div>
 
               <span class="impact-pill">Reduced out-of-stock incidents via data-driven decisions</span>
             </div>
@@ -507,13 +521,9 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Slow paper-based reimbursement process lacked SAP financial system integration.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Slow paper-based reimbursement process lacked SAP financial system integration.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Developed digital Multi-Level Approval Workflow with automated SAP posting via API.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Developed digital Multi-Level Approval Workflow with automated SAP posting via API.</div>
 
               <span class="impact-pill">Reduced turnaround time from weeks to days</span>
             </div>
@@ -533,13 +543,9 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Track warranty lifecycles and maintenance tickets across distributors without data leakage.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Track warranty lifecycles and maintenance tickets across distributors without data leakage.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Architected Multi-Tenant System with automated warranty expiration alerts and service ticket workflows.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Architected Multi-Tenant System with automated warranty expiration alerts and service ticket workflows.</div>
 
               <span class="impact-pill">Reduced warranty dispute cases via digital tracking</span>
             </div>
@@ -559,13 +565,9 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Incentivize retailers with points based on ERP sales data in legacy databases.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Incentivize retailers with points based on ERP sales data in legacy databases.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Built Dual-Database Architecture syncing MSSQL (ERP) to calculate points and manage redemptions in MySQL.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Built Dual-Database Architecture syncing MSSQL (ERP) to calculate points and manage redemptions in MySQL.</div>
 
               <span class="impact-pill">Automated point calculation for thousands of invoices</span>
             </div>
@@ -585,13 +587,9 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Integrate orders from 8 major retailers using different EDI formats (CSV, XML, Text).
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Integrate orders from 8 major retailers using different EDI formats (CSV, XML, Text).</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Developed centralized EDI Parsing Engine normalizing disparate formats into unified workflow.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Developed centralized EDI Parsing Engine normalizing disparate formats into unified workflow.</div>
 
               <span class="impact-pill">Reduced order processing time by 90%</span>
             </div>
@@ -611,18 +609,13 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Optimize pick-pack-ship workflows and track inventory across multiple channels.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Optimize pick-pack-ship workflows and track inventory across multiple channels.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Built warehouse management system with barcode scanning integration and real-time analytics dashboard.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Built warehouse management system with barcode scanning integration and real-time analytics dashboard.</div>
 
               <span class="impact-pill">Improved order accuracy for e-commerce shipments</span>
             </div>
           </article>
-
         </div>
       </section>
 
@@ -637,7 +630,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-
           <!-- Project 11: ContentAI Pro -->
           <article class="project-card rounded-xl p-6 md:p-8">
             <div class="flex flex-col h-full">
@@ -653,35 +645,31 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Users needed a unified workspace for marketing copy across multiple formats without switching tools.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Users needed a unified workspace for marketing copy across multiple formats without switching tools.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Built a robust SaaS platform offering 130+ AI tools with credit-based consumption and Stripe subscriptions.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Built a robust SaaS platform offering 130+ AI tools with credit-based consumption and Stripe subscriptions.</div>
 
               <span class="impact-pill">Production-ready SaaS with secure payments</span>
 
               <!-- Screenshots -->
               <div class="screenshot-gallery">
                 <div class="screenshot-thumb" onclick="openModal('ContentAI/01-homepage.png')">
-                  <img src="ContentAI/01-homepage.png" alt="Homepage" loading="lazy">
+                  <img src="ContentAI/01-homepage.png" alt="Homepage" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('ContentAI/02-tools-catalog.png')">
-                  <img src="ContentAI/02-tools-catalog.png" alt="Tools Catalog" loading="lazy">
+                  <img src="ContentAI/02-tools-catalog.png" alt="Tools Catalog" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('ContentAI/07-dashboard.png')">
-                  <img src="ContentAI/07-dashboard.png" alt="Dashboard" loading="lazy">
+                  <img src="ContentAI/07-dashboard.png" alt="Dashboard" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('ContentAI/09-tool-blog-writer.png')">
-                  <img src="ContentAI/09-tool-blog-writer.png" alt="Blog Writer Tool" loading="lazy">
+                  <img src="ContentAI/09-tool-blog-writer.png" alt="Blog Writer Tool" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('ContentAI/10-credits-packages.png')">
-                  <img src="ContentAI/10-credits-packages.png" alt="Credit Packages" loading="lazy">
+                  <img src="ContentAI/10-credits-packages.png" alt="Credit Packages" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('ContentAI/11-credits-subscriptions.png')">
-                  <img src="ContentAI/11-credits-subscriptions.png" alt="Subscriptions" loading="lazy">
+                  <img src="ContentAI/11-credits-subscriptions.png" alt="Subscriptions" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -701,35 +689,31 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Traditional chatbots lacked context and couldn't handle complex routing or database lookups.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Traditional chatbots lacked context and couldn't handle complex routing or database lookups.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Architected a Multi-Agent System using LangGraph with 7 specialized agents and RAG with FAISS vector search.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Architected a Multi-Agent System using LangGraph with 7 specialized agents and RAG with FAISS vector search.</div>
 
               <span class="impact-pill">Autonomous ticket resolution with intelligent escalation</span>
 
               <!-- Screenshots -->
               <div class="screenshot-gallery">
                 <div class="screenshot-thumb" onclick="openModal('helpdesk-ai/1-chat-screen.jpg')">
-                  <img src="helpdesk-ai/1-chat-screen.jpg" alt="Chat Interface" loading="lazy">
+                  <img src="helpdesk-ai/1-chat-screen.jpg" alt="Chat Interface" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('helpdesk-ai/2-Dashboard-Screen.jpg')">
-                  <img src="helpdesk-ai/2-Dashboard-Screen.jpg" alt="Dashboard" loading="lazy">
+                  <img src="helpdesk-ai/2-Dashboard-Screen.jpg" alt="Dashboard" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('helpdesk-ai/3-notification-screen.jpg')">
-                  <img src="helpdesk-ai/3-notification-screen.jpg" alt="Notifications" loading="lazy">
+                  <img src="helpdesk-ai/3-notification-screen.jpg" alt="Notifications" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('helpdesk-ai/4-knowledge-screen.jpg')">
-                  <img src="helpdesk-ai/4-knowledge-screen.jpg" alt="Knowledge Base" loading="lazy">
+                  <img src="helpdesk-ai/4-knowledge-screen.jpg" alt="Knowledge Base" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('helpdesk-ai/5-settings-screen.jpg')">
-                  <img src="helpdesk-ai/5-settings-screen.jpg" alt="Settings" loading="lazy">
+                  <img src="helpdesk-ai/5-settings-screen.jpg" alt="Settings" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('helpdesk-ai/6-login-screen.jpg')">
-                  <img src="helpdesk-ai/6-login-screen.jpg" alt="Login" loading="lazy">
+                  <img src="helpdesk-ai/6-login-screen.jpg" alt="Login" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -749,48 +733,45 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Manual inventory counting for beverage distributors was slow and error-prone.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Manual inventory counting for beverage distributors was slow and error-prone.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Developed custom object detection pipeline to identify and count 19+ distinct beverage SKUs from mobile camera feeds.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Developed custom object detection pipeline to identify and count 19+ distinct beverage SKUs from mobile camera feeds.</div>
 
               <span class="impact-pill">Reduced audit time by ~70% with high accuracy</span>
 
               <!-- Screenshots -->
               <div class="screenshot-gallery mt-4">
                 <div class="screenshot-thumb" onclick="openModal('beveragevision-ai/0-banner.png')">
-                  <img src="beveragevision-ai/0-banner.png" alt="BeverageVision AI Banner" loading="lazy">
+                  <img src="beveragevision-ai/0-banner.png" alt="BeverageVision AI Banner" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('beveragevision-ai/1-training-step.jpg')">
-                  <img src="beveragevision-ai/1-training-step.jpg" alt="Training Step" loading="lazy">
+                  <img src="beveragevision-ai/1-training-step.jpg" alt="Training Step" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('beveragevision-ai/2-result-of-traning.png')">
-                  <img src="beveragevision-ai/2-result-of-traning.png" alt="Training Results" loading="lazy">
+                  <img src="beveragevision-ai/2-result-of-traning.png" alt="Training Results" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('beveragevision-ai/3-P_curve.png')">
-                  <img src="beveragevision-ai/3-P_curve.png" alt="Precision Curve" loading="lazy">
+                  <img src="beveragevision-ai/3-P_curve.png" alt="Precision Curve" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('beveragevision-ai/4-aroundtravels-5251_result.jpg')">
-                  <img src="beveragevision-ai/4-aroundtravels-5251_result.jpg" alt="Detection Result 1" loading="lazy">
+                  <img src="beveragevision-ai/4-aroundtravels-5251_result.jpg" alt="Detection Result 1" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('beveragevision-ai/5-aroundtravels-5252_result.jpg')">
-                  <img src="beveragevision-ai/5-aroundtravels-5252_result.jpg" alt="Detection Result 2" loading="lazy">
+                  <img src="beveragevision-ai/5-aroundtravels-5252_result.jpg" alt="Detection Result 2" loading="lazy" />
                 </div>
               </div>
 
               <!-- Demo Video -->
               <div class="mt-4">
-                <div class="relative w-full rounded-lg overflow-hidden border-2 border-gray-200" style="padding-bottom: 56.25%;">
+                <div class="relative w-full rounded-lg overflow-hidden border-2 border-gray-200" style="padding-bottom: 56.25%">
                   <iframe
                     class="absolute top-0 left-0 w-full h-full"
                     src="https://www.youtube.com/embed/-zOxJ51mgFI"
                     title="BeverageVision AI Demo"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
+                    allowfullscreen
+                  >
                   </iframe>
                 </div>
               </div>
@@ -811,18 +792,13 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Single-model AI predictions often suffered from bias or hallucinations.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Single-model AI predictions often suffered from bias or hallucinations.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Built an Ensemble AI Architecture cross-validating signals from GPT-4, Claude 3.5, and Gemini Pro with consensus engine.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Built an Ensemble AI Architecture cross-validating signals from GPT-4, Claude 3.5, and Gemini Pro with consensus engine.</div>
 
               <span class="impact-pill">Increased signal accuracy via multi-model consensus</span>
             </div>
           </article>
-
         </div>
       </section>
 
@@ -837,7 +813,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-
           <!-- Project 15: eOrder Mobile -->
           <article class="project-card rounded-xl p-6 md:p-8">
             <div class="flex flex-col h-full">
@@ -852,29 +827,25 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> B2B ordering platform needed native-like experience with complex pricing tiers.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> B2B ordering platform needed native-like experience with complex pricing tiers.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Built high-performance app with Firebase Cloud Messaging and multi-language interface.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Built high-performance app with Firebase Cloud Messaging and multi-language interface.</div>
 
               <span class="impact-pill">Reduced order errors and support calls</span>
 
               <!-- Screenshots -->
               <div class="screenshot-gallery mobile">
                 <div class="screenshot-thumb" onclick="openModal('eorder-mobile/Home-Screen.webp')">
-                  <img src="eorder-mobile/Home-Screen.webp" alt="Home Screen" loading="lazy">
+                  <img src="eorder-mobile/Home-Screen.webp" alt="Home Screen" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('eorder-mobile/Product-Screen.webp')">
-                  <img src="eorder-mobile/Product-Screen.webp" alt="Product Screen" loading="lazy">
+                  <img src="eorder-mobile/Product-Screen.webp" alt="Product Screen" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('eorder-mobile/Cart-Screen.webp')">
-                  <img src="eorder-mobile/Cart-Screen.webp" alt="Cart Screen" loading="lazy">
+                  <img src="eorder-mobile/Cart-Screen.webp" alt="Cart Screen" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('eorder-mobile/Summary-Screen.webp')">
-                  <img src="eorder-mobile/Summary-Screen.webp" alt="Order Summary" loading="lazy">
+                  <img src="eorder-mobile/Summary-Screen.webp" alt="Order Summary" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -894,29 +865,25 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Field reps needed to capture shelf-share and pricing data in remote areas without internet.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Field reps needed to capture shelf-share and pricing data in remote areas without internet.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Implemented Offline-First Architecture with request queuing and automatic sync when connected.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Implemented Offline-First Architecture with request queuing and automatic sync when connected.</div>
 
               <span class="impact-pill">Data capture accuracy regardless of network</span>
 
               <!-- Screenshots -->
               <div class="screenshot-gallery mobile">
                 <div class="screenshot-thumb" onclick="openModal('merchandiser-mobile-app/3.dashboard-screen.png')">
-                  <img src="merchandiser-mobile-app/3.dashboard-screen.png" alt="Dashboard" loading="lazy">
+                  <img src="merchandiser-mobile-app/3.dashboard-screen.png" alt="Dashboard" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('merchandiser-mobile-app/4.schedule-screen.png')">
-                  <img src="merchandiser-mobile-app/4.schedule-screen.png" alt="Schedule" loading="lazy">
+                  <img src="merchandiser-mobile-app/4.schedule-screen.png" alt="Schedule" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('merchandiser-mobile-app/8.activites-screen.png')">
-                  <img src="merchandiser-mobile-app/8.activites-screen.png" alt="Activities" loading="lazy">
+                  <img src="merchandiser-mobile-app/8.activites-screen.png" alt="Activities" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('merchandiser-mobile-app/9.price-check-screen.png')">
-                  <img src="merchandiser-mobile-app/9.price-check-screen.png" alt="Price Check" loading="lazy">
+                  <img src="merchandiser-mobile-app/9.price-check-screen.png" alt="Price Check" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -936,13 +903,9 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Sales supervisors needed to track Work-With coaching sessions and KPIs in the field.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Sales supervisors needed to track Work-With coaching sessions and KPIs in the field.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Engineered robust app using MobX State Tree for complex state and MMKV for high-performance local storage.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Engineered robust app using MobX State Tree for complex state and MMKV for high-performance local storage.</div>
 
               <span class="impact-pill">Real-time performance tracking against sales targets</span>
             </div>
@@ -962,18 +925,13 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Sales teams in remote areas needed to place orders without reliable internet access.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Sales teams in remote areas needed to place orders without reliable internet access.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Engineered Offline-First Application using Realm Database with complex pricing logic and bi-directional sync.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Engineered Offline-First Application using Realm Database with complex pricing logic and bi-directional sync.</div>
 
               <span class="impact-pill">Increased daily visits by eliminating network downtime</span>
             </div>
           </article>
-
         </div>
       </section>
 
@@ -988,7 +946,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-
           <!-- Project 19: QuantForge AI -->
           <article class="project-card rounded-xl p-6 md:p-8">
             <div class="flex flex-col h-full">
@@ -1004,13 +961,9 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Retail traders lacked institutional-grade tools to backtest strategies against high-frequency data.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Retail traders lacked institutional-grade tools to backtest strategies against high-frequency data.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Built ML pipeline using Ensemble Learning (Random Forest, XGBoost) to predict market movements with 96% test accuracy.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Built ML pipeline using Ensemble Learning (Random Forest, XGBoost) to predict market movements with 96% test accuracy.</div>
 
               <span class="impact-pill">Democratized hedge-fund style algorithmic trading</span>
             </div>
@@ -1030,13 +983,9 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Manual trading was emotional and inconsistent. Needed automation based on strict technical analysis rules.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Manual trading was emotional and inconsistent. Needed automation based on strict technical analysis rules.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Developed bridge between Node.js Analysis Engine and MT5 to execute trades via Expert Advisors with RSI/MACD indicators.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Developed bridge between Node.js Analysis Engine and MT5 to execute trades via Expert Advisors with RSI/MACD indicators.</div>
 
               <span class="impact-pill">24/7 execution with strict risk management protocols</span>
             </div>
@@ -1057,34 +1006,29 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Challenge:</strong> Investors needed to track Dollar Cost Averaging (DCA) performance with real-time market data.
-              </div>
+              <div class="detail-block"><strong>Challenge:</strong> Investors needed to track Dollar Cost Averaging (DCA) performance with real-time market data.</div>
 
-              <div class="detail-block">
-                <strong>Solution:</strong> Built dashboard integrating Finnhub API for live pricing and calculating realized/unrealized gains in real-time.
-              </div>
+              <div class="detail-block"><strong>Solution:</strong> Built dashboard integrating Finnhub API for live pricing and calculating realized/unrealized gains in real-time.</div>
 
               <span class="impact-pill">Institutional-grade portfolio analytics</span>
 
               <!-- Screenshots -->
               <div class="screenshot-gallery">
                 <div class="screenshot-thumb" onclick="openModal('stock-portfolio-manager-reactjs/Dashboard-page.png')">
-                  <img src="stock-portfolio-manager-reactjs/Dashboard-page.png" alt="Dashboard" loading="lazy">
+                  <img src="stock-portfolio-manager-reactjs/Dashboard-page.png" alt="Dashboard" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('stock-portfolio-manager-reactjs/Portfolios-page.png')">
-                  <img src="stock-portfolio-manager-reactjs/Portfolios-page.png" alt="Portfolios" loading="lazy">
+                  <img src="stock-portfolio-manager-reactjs/Portfolios-page.png" alt="Portfolios" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('stock-portfolio-manager-reactjs/DCA-Calculate-page.png')">
-                  <img src="stock-portfolio-manager-reactjs/DCA-Calculate-page.png" alt="DCA Calculator" loading="lazy">
+                  <img src="stock-portfolio-manager-reactjs/DCA-Calculate-page.png" alt="DCA Calculator" loading="lazy" />
                 </div>
                 <div class="screenshot-thumb" onclick="openModal('stock-portfolio-manager-reactjs/Performance-page.png')">
-                  <img src="stock-portfolio-manager-reactjs/Performance-page.png" alt="Performance Analytics" loading="lazy">
+                  <img src="stock-portfolio-manager-reactjs/Performance-page.png" alt="Performance Analytics" loading="lazy" />
                 </div>
               </div>
             </div>
           </article>
-
         </div>
       </section>
 
@@ -1099,7 +1043,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-
           <!-- Project 22: NotifyHub Pro -->
           <article class="project-card rounded-xl p-6 md:p-8">
             <div class="flex flex-col h-full">
@@ -1114,9 +1057,7 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Description:</strong> A centralized notification engine managing LINE and Mobile Push channels for enterprise alerts.
-              </div>
+              <div class="detail-block"><strong>Description:</strong> A centralized notification engine managing LINE and Mobile Push channels for enterprise alerts.</div>
 
               <span class="impact-pill">Unified multi-channel notification system</span>
             </div>
@@ -1136,9 +1077,7 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Description:</strong> Database health monitoring SaaS that proactively alerts admins of SQL Server anomalies (invoice gaps, duplicate prices) via LINE.
-              </div>
+              <div class="detail-block"><strong>Description:</strong> Database health monitoring SaaS that proactively alerts admins of SQL Server anomalies (invoice gaps, duplicate prices) via LINE.</div>
 
               <span class="impact-pill">Proactive database anomaly detection</span>
             </div>
@@ -1158,9 +1097,7 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Description:</strong> A highly interactive web application for analyzing Thai license plate numerology using complex calculation logic.
-              </div>
+              <div class="detail-block"><strong>Description:</strong> A highly interactive web application for analyzing Thai license plate numerology using complex calculation logic.</div>
 
               <span class="impact-pill">Complex numerology calculations with smooth animations</span>
             </div>
@@ -1180,17 +1117,13 @@
                 </div>
               </div>
 
-              <div class="detail-block">
-                <strong>Description:</strong> Location-based restaurant discovery tool using Google Maps & Places API with intelligent grid-based search algorithms to scan entire provinces.
-              </div>
+              <div class="detail-block"><strong>Description:</strong> Location-based restaurant discovery tool using Google Maps & Places API with intelligent grid-based search algorithms to scan entire provinces.</div>
 
               <span class="impact-pill">Province-wide restaurant discovery with smart grid search</span>
             </div>
           </article>
-
         </div>
       </section>
-
     </main>
 
     <!-- Footer -->
@@ -1207,75 +1140,74 @@
     <!-- Image Modal -->
     <div id="imageModal" class="modal" onclick="closeModal()">
       <span class="text-white text-4xl font-bold absolute top-6 right-10 cursor-pointer hover:text-gray-300 transition no-print" onclick="closeModal()">&times;</span>
-      <img id="modalImage" class="modal-content" alt="Portfolio Screenshot">
+      <img id="modalImage" class="modal-content" alt="Portfolio Screenshot" />
     </div>
 
     <!-- JavaScript -->
     <script>
       // Modal Functions
       function openModal(imageSrc) {
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        modal.classList.add('active');
-        modalImg.src = imageSrc;
-        document.body.style.overflow = 'hidden';
+        const modal = document.getElementById('imageModal')
+        const modalImg = document.getElementById('modalImage')
+        modal.classList.add('active')
+        modalImg.src = imageSrc
+        document.body.style.overflow = 'hidden'
       }
 
       function closeModal() {
-        const modal = document.getElementById('imageModal');
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        const modal = document.getElementById('imageModal')
+        modal.classList.remove('active')
+        document.body.style.overflow = 'auto'
       }
 
       // Keyboard Support
-      document.addEventListener('keydown', function(event) {
+      document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
-          closeModal();
+          closeModal()
         }
-      });
+      })
 
       // Smooth Scroll with Offset
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+          const target = document.querySelector(this.getAttribute('href'))
           if (target) {
-            const offset = 100;
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            const offset = 100
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset
             window.scrollTo({
               top: targetPosition,
               behavior: 'smooth'
-            });
+            })
           }
-        });
-      });
+        })
+      })
 
       // Active Navigation Highlight on Scroll
-      window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('.category-section');
-        const navLinks = document.querySelectorAll('.sticky-nav a');
+      window.addEventListener('scroll', function () {
+        const sections = document.querySelectorAll('.category-section')
+        const navLinks = document.querySelectorAll('.sticky-nav a')
 
-        let current = '';
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop - 150;
+        let current = ''
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 150
           if (window.pageYOffset >= sectionTop) {
-            current = section.getAttribute('id');
+            current = section.getAttribute('id')
           }
-        });
+        })
 
-        navLinks.forEach(link => {
-          link.classList.remove('active');
+        navLinks.forEach((link) => {
+          link.classList.remove('active')
           if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
+            link.classList.add('active')
           }
-        });
-      });
+        })
+      })
 
       // Print Friendly
-      window.addEventListener('beforeprint', function() {
-        closeModal();
-      });
+      window.addEventListener('beforeprint', function () {
+        closeModal()
+      })
     </script>
-
   </body>
 </html>
