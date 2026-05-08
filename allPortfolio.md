@@ -7249,17 +7249,17 @@ This foundation positions Smart ESM as a platform that can grow with business ne
 
 | Category | Details |
 |----------|---------|
-| **Project Type** | ✅ **Full Stack Mobile Application** - React Native 0.82 cross-platform (iOS & Android) |
+| **Project Type** | ✅ **Full Stack Mobile Application** - React Native 0.83.9 cross-platform (iOS & Android) |
 | **Architecture** | ✅ **SaaS-Ready** - Offline-first with automatic sync capabilities |
 | **State Management** | MobX State Tree with AsyncStorage persistence |
 | **Features** | Camera capture, GPS tracking, real-time data collection |
 
 ---
 
-**Version:** 2.0 (smartesm2)
-**Build:** React Native 0.82.0
-**Status:** Production-Ready
-**Last Updated:** December 2025
+**Version:** 0.0.1 (smartesm2)
+**Build:** React Native 0.83.9
+**Status:** Current repository documentation (build verification pending)
+**Last Updated:** May 2026
 
 ---
 
@@ -7291,16 +7291,16 @@ The platform directly impacts business operations by reducing time spent on admi
 ## 🏗️ Tech Stack & Architecture
 
 ### **Core Framework**
-- **React Native 0.82.0** - Cross-platform mobile framework for iOS and Android
-- **React 19.1.1** - Latest React with concurrent features and improved performance
+- **React Native 0.83.9** - Cross-platform mobile framework for iOS and Android
+- **React 19.2.0** - Current React version used by this repository
 - **Node.js 20+** - Modern JavaScript runtime with enhanced security and performance
 
 ### **Navigation & Routing**
-- **React Navigation 6** - Native stack navigation with deep linking support
-  - `@react-navigation/native` (7.1.22) - Core navigation primitives
-  - `@react-navigation/stack` (7.6.8) - Stack-based navigation patterns
-  - `@react-navigation/bottom-tabs` (7.8.8) - Bottom tab navigation for main interface
-- **React Native Screens** (4.18.0) - Native screen primitives for better performance
+- **React Navigation 7** - Stack and bottom tab navigation for the current app flow
+  - `@react-navigation/native` (^7.1.28) - Core navigation primitives
+  - `@react-navigation/stack` (^7.7.2) - Stack-based navigation patterns
+  - `@react-navigation/bottom-tabs` (^7.14.0) - Bottom tab navigation for main interface
+- **React Native Screens** (^4.23.0) - Native screen primitives for better performance
 - **React Native Safe Area Context** (5.6.2) - Safe area handling for notched devices
 
 ### **State Management**
@@ -7322,21 +7322,21 @@ The platform directly impacts business operations by reducing time spent on admi
   - Flash control (auto/on/off)
   - Front/back camera switching
   - Permission handling
-- **React Native Reanimated** (4.1.5) - Smooth animations and gesture handling
-- **React Native Worklets** (0.6.1) - High-performance animation worklets
+- **React Native Reanimated** (4.2.2) - Smooth animations and gesture handling
+- **React Native Worklets** (0.7.4) - High-performance animation worklets
 
 ### **Location & Maps**
-- **React Native Maps** (1.26.19) - Google Maps integration for customer location
+- **React Native Maps** (^1.27.1) - Google Maps integration for customer location
 - **React Native Geolocation** (3.4.0) - GPS coordinates for activity tracking
 - **Location-Based Features** - Route planning, distance calculation, proximity alerts
 
 ### **Date & Time**
-- **React Native DateTimePicker** (8.5.1) - Native date and time selection
+- **React Native DateTimePicker** (^8.6.0) - Native date and time selection
 - **React Native Modal DateTime Picker** (15.0.0) - Enhanced modal date picker
 - **Moment.js** (2.30.1) - Date manipulation and formatting
 
 ### **Network & API**
-- **Axios** (1.13.2) - HTTP client with interceptors and request cancellation
+- **Axios** (^1.13.5) - HTTP client with interceptors and request cancellation
 - **Custom ApiService** - Centralized API management with:
   - Automatic retry logic (3 attempts with exponential backoff)
   - Request-specific cancel tokens for proper cleanup
@@ -7346,14 +7346,14 @@ The platform directly impacts business operations by reducing time spent on admi
 
 ### **Development Tools**
 - **TypeScript** (5.8.3) - Type safety with TSConfig for modern JavaScript
-- **ESLint** (8.19.0) - Code quality and style enforcement
-- **Jest** (29.6.3) - Unit testing framework
+- **ESLint** (^8.57.1) - Code quality and style enforcement
+- **Jest** (^29.7.0) - Unit testing framework
 - **Prettier** (2.8.8) - Code formatting
 - **Metro Bundler** - Fast JavaScript bundler for React Native
 
 ### **Platform Support**
-- **iOS** - Xcode 26.1.1, iOS 26.1 SDK, CocoaPods for dependency management
-- **Android** - Gradle 8.14.3, Java 17, Android SDK 34
+- **iOS** - Native iOS project and CocoaPods configuration are present under `ios/`; exact Xcode/iOS SDK build verification should be performed in the target environment
+- **Android** - Gradle wrapper 8.14.3 with compile SDK 36, target SDK 36, min SDK 24
 
 ---
 
@@ -7741,7 +7741,7 @@ Each store is observable, automatically triggering UI updates when data changes.
 
 ### **Manual Testing**
 The application has been extensively tested on:
-- **iOS** - iPhone 17 Pro simulator (iOS 26.1)
+- **iOS** - Simulator and real-device verification should be run in the target developer/CI environment
 - **Android** - Various Android devices and emulators
 - **Real Devices** - Physical devices for camera and GPS testing
 
@@ -7751,9 +7751,9 @@ The application has been extensively tested on:
 - **Integration Tests** - End-to-end user flows
 
 ### **Build Verification**
-- **Android Build** - Gradle 8.14.3, successful APK/AAB generation
-- **iOS Build** - Xcode 26.1.1, successful IPA generation
-- **Health Check** - December 1, 2025 - All features verified working
+- **Android Build** - Gradle wrapper 8.14.3 is configured; APK/AAB generation should be verified after installing dependencies
+- **iOS Build** - Native iOS project is present; IPA generation should be verified in the target Xcode/CocoaPods environment
+- **Health Check** - Current checkout requires dependency installation before lint/test/build verification; observed test blocker without `node_modules`: `jest: not found`
 
 ---
 
@@ -7824,7 +7824,7 @@ Each major feature includes detailed implementation notes, making it easy for de
 Unlike generic CRM or sales apps, Smart ESM Mobile was purpose-built for the unique challenges of field sales. The offline-first architecture recognizes that connectivity can't be guaranteed. The camera integration understands that photos are critical evidence. The activity system reflects the diversity of field tasks, from simple check-ins to complex audits.
 
 ### **Modern Yet Proven**
-The application uses cutting-edge React Native technology (0.82.0, React 19.1.1) while maintaining patterns proven in production. It's not an experiment—it's a production-grade application rebuilt with modern tools for better performance, maintainability, and developer experience.
+The application uses the current React Native technology in this repository (React Native 0.83.9, React 19.2.0) while maintaining patterns proven in production. It's not an experiment—it's a production-grade application rebuilt with modern tools for better performance, maintainability, and developer experience.
 
 ### **Extensible Architecture**
 The modular design makes it straightforward to add new activity types, integrate new APIs, or customize the UI for specific industries. The controller pattern separates business logic from UI, while the service layer abstracts API details. This separation of concerns makes the codebase maintainable and testable.
@@ -7887,7 +7887,7 @@ Smart ESM Mobile represents the evolution of field sales technology—modern, re
 
 Whether you're a sales representative in the field, a manager analyzing performance, or a developer extending the platform, Smart ESM Mobile provides the tools and architecture to succeed. The combination of proven business logic with modern React Native technology creates an application that's both powerful and maintainable.
 
-The journey from React Native 0.61.3 to 0.82.0 wasn't just a technical upgrade—it was an opportunity to refine patterns, improve performance, and build a foundation for the next decade of field sales innovation.
+The journey from the legacy Smart ESM mobile baseline to the current React Native 0.83.9 stack is not just a technical upgrade—it is an opportunity to refine patterns, improve performance, and build a foundation for the next decade of field sales innovation.
 
 ---
 
@@ -7895,6 +7895,7 @@ The journey from React Native 0.61.3 to 0.82.0 wasn't just a technical upgrade�
 
 *Document Version: 1.0*
 *Created: December 4, 2025*
+*Updated: May 8, 2026*
 *Author: Smart ESM Development Team*
 
 ---

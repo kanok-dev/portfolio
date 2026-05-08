@@ -157,14 +157,14 @@
 * **Key Tech:** React Native 0.76, Redux Toolkit, Firebase, i18next.
 * **Impact:** Streamlined the B2B ordering process, reducing order errors and support calls.
 
-### 17. SmartESM Mobile - Offline Field Operations
-**Role:** Mobile Developer
-**Type:** Field Data Collection App
+### 17. SmartESM Mobile - Field Sales & Merchandising Operations
+**Role:** Mobile Developer / React Native Modernization
+**Type:** Cross-Platform Field Operations App
 
-* **The Challenge:** Field reps needed to capture shelf-share, pricing, and competitor data in remote areas without internet.
-* **The Solution:** Implemented a true **Offline-First Architecture** that queues requests and syncs automatically when connectivity is restored.
-* **Key Tech:** React Native, SQLite (Local DB), Background Sync, Geolocation.
-* **Impact:** Guaranteed data capture accuracy regardless of network conditions.
+* **The Challenge:** Field sales and merchandising teams needed a mobile workflow to manage daily schedules, customer visits, pricing audits, stock checks, surveys, POSM requests, promotion checks, and shelf execution data with photo/GPS evidence.
+* **The Solution:** Modernized the Smart ESM mobile app on a current **React Native 0.83.9** stack with React Navigation v7, MobX/MobX State Tree, AsyncStorage persistence, Axios API services, Vision Camera, and React Native Maps.
+* **Key Tech:** React Native 0.83.9, React 19.2, React Navigation v7, MobX State Tree, AsyncStorage, Axios, Vision Camera, React Native Maps.
+* **Impact:** Digitized retail execution workflows for field teams, improving visit accountability, data accuracy, and management visibility across customer outlets.
 
 ### 18. FieldForce Pro - Offline Sales Force Automation
 **Role:** Mobile Architect
