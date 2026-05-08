@@ -22,6 +22,11 @@
 
 ---
 
+
+## Production Links
+
+- **App Store:** https://apps.apple.com/th/app/esm-smart-merchant/id1498603283
+
 ## 📱 Software Overview
 
 Smart ESM Mobile is a comprehensive field sales management application designed for sales representatives, merchandisers, and field agents who work directly with retail customers. Born from the need to digitize and streamline field operations, this mobile platform transforms how sales teams capture data, track activities, and manage customer relationships on the go.

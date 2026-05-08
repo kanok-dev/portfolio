@@ -15,6 +15,11 @@
 
 ---
 
+
+## Production Links
+
+- **App Store:** https://apps.apple.com/th/app/eorder-app/id6468933075
+
 ## eOrdering React Native Application
 
 **eOrdering** is a comprehensive enterprise-grade mobile ordering and asset management platform built with cutting-edge React Native 0.76+ technology. This cross-platform solution delivers seamless B2B/B2C e-commerce experiences with advanced inventory tracking, multi-language support (Thai, English, Japanese, Lao), and real-time notifications, designed for scalability and performance in production environments.

@@ -39,7 +39,7 @@ This is a **visual portfolio showcase** containing screenshots, documentation, a
 | Project | Description | Tech Stack |
 |---------|-------------|------------|
 | **RouteForce Pro** | Multi-tenant distribution platform with route optimization | React 18, Node.js, MS SQL, Redis |
-| **USBT Pro** | High-scale sports tournament platform (100K+ participants) | Next.js 14, NestJS, GraphQL, PostgreSQL |
+| **USBT Pro** | High-scale sports tournament platform (100K+ participants) ([Live](https://usbtthailand.net/)) | Next.js 14, NestJS, GraphQL, PostgreSQL |
 | **SmartSales Pro** | Sales Force Automation for Fortune 500 retail | .NET 6, Entity Framework Core, MS SQL |
 | **NurseShip** | Healthcare workforce management & shift scheduling | Next.js 15, Prisma, MySQL, Stripe |
 | **SmartESM Backoffice** | Field operations management with real-time tracking | React 18, Redux, Node.js, Redis |
@@ -47,7 +47,7 @@ This is a **visual portfolio showcase** containing screenshots, documentation, a
 | **VeriSmart Pro** | Warranty & maintenance tracking system | Next.js, Prisma, PostgreSQL |
 | **SmartRedeem Pro** | B2B loyalty platform with dual-database architecture | React, Node.js, MS SQL, MongoDB |
 | **ODMS Pro** | EDI & order management for 8 major retailers | .NET Core, SQL Server, EDI Integration |
-| **LogiFlow Pro** | E-commerce logistics & fulfillment platform | React 18, Node.js, PostgreSQL |
+| **LogiFlow Pro / KU Garden** | E-commerce logistics & fulfillment platform ([Live](https://kugarden.smart-express.biz)) | React 18, Node.js, PostgreSQL |
 
 ### 🤖 AI & Machine Learning Solutions (4 Projects)
 
@@ -58,12 +58,13 @@ This is a **visual portfolio showcase** containing screenshots, documentation, a
 | **BeverageVision AI** | Computer vision inventory tracking (19+ product classes) | Python, PyTorch, YOLO11, OpenCV |
 | **GoldMind AI** | Multi-model trading intelligence with ensemble architecture | GPT-4, Claude 3.5, Gemini, Node.js |
 
-### 📱 Mobile & Offline-First Applications (4 Projects)
+### 📱 Mobile & Offline-First Applications (5 Projects)
 
 | Project | Description | Tech Stack |
 |---------|-------------|------------|
-| **eOrder Mobile** | B2B commerce app with offline order sync | React Native 0.76, Redux, Firebase |
-| **SmartESM Mobile** | Offline field operations with SQLite | React Native, SQLite, MobX |
+| **eOrder Mobile** | B2B commerce app with offline order sync ([App Store](https://apps.apple.com/th/app/eorder-app/id6468933075)) | React Native 0.76, Redux, Firebase |
+| **SmartESM Mobile** | Offline field operations with SQLite ([App Store](https://apps.apple.com/th/app/esm-smart-merchant/id1498603283)) | React Native, SQLite, MobX |
+| **Inspector Baseline** | Building inspection app with defect capture/reporting ([App Store](https://apps.apple.com/au/app/inspector-baseline/id6761975149)) | React Native/Expo, Camera, Location, AI |
 | **PJP Mobile** | Field performance tracking & coaching | React Native 0.79, MobX, i18n |
 | **FieldForce Pro** | Offline sales force automation | React Native, Realm DB, Redux |
 

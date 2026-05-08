@@ -1,3 +1,41 @@
+# MezzoSync - Live Translation Platform
+
+> **🎙️ AI Realtime Translation | Expo Web + Mobile | Full Stack App**
+>
+> Production live translation platform with realtime voice transcription, translated text display, and speech playback.
+>
+> **Live Web/App:** https://mezzo-sync.kanoks.me
+> **API Gateway:** https://mezzo-sync-api.kanoks.me
+
+---
+
+## Project Overview
+
+MezzoSync is a live translation platform built for web and mobile. It captures microphone audio, streams PCM audio frames over WebSocket, performs realtime speech-to-text and translation, then supports realtime text-to-speech playback.
+
+## Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Frontend | Expo SDK 55, React Native 0.83.4, React 19.2, Expo Router |
+| Web/Mobile | React Native Web, NativeWind, Tailwind CSS |
+| Realtime AI | Soniox STT / Translation / TTS |
+| Audio | @siteed/audio-studio, expo-audio |
+| Backend | Express 5, TypeScript, WebSocket, Zod |
+| Auth/Security | JWT, bcrypt, ephemeral Soniox token gateway |
+| Deployment | PM2, Cloudflare Tunnel |
+
+## Key Features
+
+- Live voice transcription
+- Realtime language translation
+- Sentence-level text-to-speech playback
+- Original + translated text panels
+- Secure backend token gateway so API keys never ship in the client
+- Web and mobile-ready Expo architecture
+
+---
+
 # ContentAI Pro - AI Content Generation Platform
 
 > **🚀 SaaS Platform | Full Stack Application**
@@ -362,7 +400,7 @@ npm run dev
 
 **Mr. Kanok Santhong**  
 Senior Full-Stack Developer & IT Consultant  
-https://kanoks.me/
+https://profile.kanoks.me/
 
 ---
 
@@ -1155,6 +1193,11 @@ Remember: in trading, survival comes first, profit comes second. This system is 
 
 `Node.js`, `Express.js`, `JavaScript`, `RESTful API`, `API Development`, `API Integration`, `Full-Stack Development`, `Algorithmic Trading`, `Technical Analysis`, `MetaTrader 5`, `MQL5`, `Zod`, `Axios`, `node-cron`, `Jest`, `ESLint`, `Financial Technology`, `Trading Bot`, `Automated Trading`, `Web Application`, `JSON`, `HTTP`, `Git`, `GitHub`, `Helmet`, `CORS`, `Coinbase API`, `Alpha Vantage`, `Finnhub API`
 # eOrder Mobile - Enterprise B2B/B2C Commerce Platform
+
+## Production Links
+
+- **App Store:** https://apps.apple.com/th/app/eorder-app/id6468933075
+
 
 > **🚀 Full Stack Mobile Application | Cross-Platform Solution**
 
@@ -2564,6 +2607,12 @@ Helpdesk Agentic AI demonstrates how modern AI techniques can solve real busines
 
 Whether you're launching a new product's support system or modernizing an existing helpdesk, this platform offers a solid foundation. The code is clean, the architecture is sound, and the path forward is clear. Customer support doesn't have to be a bottleneck—with the right tools, it becomes a competitive advantage.
 # LogiFlow Pro - Enterprise Logistics & Fulfillment Platform
+
+## Production Links
+
+- **Frontend:** https://kugarden.smart-express.biz
+- **Backend API:** https://api.kugarden.smart-express.biz
+
 
 > **🚀 Full Stack Web Application | E-Commerce Logistics Management**
 
@@ -7240,6 +7289,11 @@ This foundation positions Smart ESM as a platform that can grow with business ne
 
 `React`, `Redux`, `Redux Thunk`, `Node.js`, `Express.js`, `Material UI`, `Bootstrap`, `Reactstrap`, `Chart.js`, `Plotly.js`, `Chartist`, `React Pivottable`, `React Big Calendar`, `Formik`, `React Hook Form`, `React Table`, `MariaDB`, `Microsoft SQL Server`, `Sequelize`, `Redis`, `Bull`, `PM2`, `Docker`, `Jenkins`, `Full-Stack Development`, `Web Application`, `RESTful API`, `API Development`, `API Integration`, `JWT`, `bcrypt`, `Pino`, `Morgan`, `Multer`, `Sharp`, `SaaS`, `Multi-Tenant`, `Database Management`, `Database Architecture`, `JavaScript`, `HTML5`, `CSS`, `SASS`, `Webpack`, `Babel`, `Git`, `GitHub`, `Responsive Design`, `Retail Execution`, `FMCG`, `Consumer Goods`
 # SmartESM Mobile - Field Sales Management Platform
+
+## Production Links
+
+- **App Store:** https://apps.apple.com/th/app/esm-smart-merchant/id1498603283
+
 
 > **🚀 Full Stack Mobile Application | Offline-First Field Operations**
 
@@ -11930,8 +11984,8 @@ Interested in seeing USBT in action? Contact us for a personalized demo:
 
 - **Email**: sales@usbt.com
 - **Phone**: +66 (0) 2-XXX-XXXX
-- **Website**: https://www.usbt.com
-- **Demo Portal**: https://demo.usbt.com
+- **Website**: https://usbtthailand.net/
+- **Demo Portal**: https://usbtthailand.net/
 
 ### Trial Access
 Sign up for a 30-day free trial with full access to all features:

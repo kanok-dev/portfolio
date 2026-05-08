@@ -362,7 +362,7 @@ npm run dev
 
 **Mr. Kanok Santhong**  
 Senior Full-Stack Developer & IT Consultant  
-https://kanoks.me/
+https://profile.kanoks.me/
 
 ---
 

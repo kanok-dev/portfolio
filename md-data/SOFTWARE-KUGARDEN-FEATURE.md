@@ -1,5 +1,11 @@
 # LogiFlow Pro - Enterprise Logistics & Fulfillment Platform
 
+## Production Links
+
+- **Frontend:** https://kugarden.smart-express.biz
+- **Backend API:** https://api.kugarden.smart-express.biz
+
+
 > **🚀 Full Stack Web Application | E-Commerce Logistics Management**
 
 ---
