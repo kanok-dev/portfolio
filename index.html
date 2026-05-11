@@ -5,60 +5,451 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Senior Full-Stack & AI Engineer Portfolio | 10+ Years Experience</title>
     <meta name="description" content="Portfolio showcasing 26 projects across AI/ML, Enterprise SaaS, Mobile Apps, FinTech, and specialized tools. 10+ years of full-stack development experience." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Smooth Animations */
+      :root {
+        --bg: #f5f1ea;
+        --bg-deep: #07111f;
+        --surface: rgba(255, 255, 255, 0.78);
+        --surface-strong: rgba(255, 255, 255, 0.92);
+        --surface-dark: rgba(8, 18, 33, 0.84);
+        --line: rgba(15, 23, 42, 0.1);
+        --line-strong: rgba(255, 255, 255, 0.14);
+        --text: #0f172a;
+        --muted: #526071;
+        --accent: #1d4ed8;
+        --accent-strong: #0f3b92;
+        --accent-soft: rgba(37, 99, 235, 0.12);
+        --warm: #b6925f;
+        --shadow-soft: 0 28px 60px rgba(15, 23, 42, 0.08);
+        --shadow-strong: 0 32px 80px rgba(15, 23, 42, 0.18);
+        --radius-lg: 28px;
+        --radius-md: 20px;
+        --radius-sm: 14px;
+      }
+
       * {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
       }
 
       html {
         scroll-behavior: smooth;
       }
 
-      /* Project Cards */
+      body {
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 28%),
+          radial-gradient(circle at top right, rgba(182, 146, 95, 0.12), transparent 22%),
+          linear-gradient(180deg, #fcfbf8 0%, var(--bg) 48%, #f8f5ef 100%);
+      }
+
+      h1,
+      h2,
+      h3 {
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        line-height: 1.7;
+      }
+
+      a {
+        cursor: pointer;
+      }
+
+      .hero-shell {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.24), transparent 24%),
+          radial-gradient(circle at 80% 0%, rgba(182, 146, 95, 0.18), transparent 22%),
+          linear-gradient(135deg, #07111f 0%, #0c1c34 42%, #11294c 100%);
+      }
+
+      .hero-shell::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 120px 120px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 88%);
+        pointer-events: none;
+      }
+
+      .hero-shell::after {
+        content: '';
+        position: absolute;
+        inset: auto -12% -22% auto;
+        width: 460px;
+        height: 460px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 2rem;
+        align-items: end;
+      }
+
+      .hero-kicker,
+      .section-kicker,
+      .panel-kicker {
+        margin: 0 0 1rem;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-kicker {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .hero-lead {
+        max-width: 780px;
+        font-size: clamp(1.05rem, 1rem + 0.45vw, 1.35rem);
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .hero-summary {
+        max-width: 700px;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        margin-top: 2rem;
+      }
+
+      .hero-button,
+      .hero-secondary-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0.8rem 1.2rem;
+        border-radius: 9999px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+      }
+
+      .hero-button {
+        color: white;
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        box-shadow: 0 14px 32px rgba(37, 99, 235, 0.34);
+      }
+
+      .hero-secondary-button {
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-button:hover,
+      .hero-secondary-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .hero-panel {
+        position: relative;
+        padding: 1.4rem;
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius-lg);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+        backdrop-filter: blur(18px);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+      }
+
+      .hero-panel-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin: 1.25rem 0;
+      }
+
+      .metric-card {
+        padding: 1rem;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .metric-label {
+        display: block;
+        margin-top: 0.35rem;
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 0.8rem;
+      }
+
+      .stat-number {
+        font-weight: 800;
+        color: white;
+        line-height: 1;
+      }
+
+      .focus-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+        margin-top: 1rem;
+      }
+
+      .focus-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 0.7rem;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.78rem;
+        font-weight: 600;
+      }
+
+      .sticky-nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 0.9rem 0 0;
+      }
+
+      .nav-shell {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.55rem;
+        padding: 0.55rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+      }
+
+      .nav-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0.7rem 1rem;
+        border-radius: 9999px;
+        color: #334155;
+        font-size: 0.88rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: white;
+        background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+        box-shadow: 0 12px 30px rgba(37, 99, 235, 0.22);
+        transform: translateY(-1px);
+      }
+
+      .section-shell {
+        position: relative;
+        padding: 2rem 0 0;
+      }
+
+      .section-shell::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(15, 23, 42, 0.06), rgba(37, 99, 235, 0.18), rgba(15, 23, 42, 0.06));
+      }
+
+      .section-kicker {
+        color: var(--accent);
+      }
+
+      .section-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .section-description {
+        max-width: 58rem;
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+
       .project-card {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        background: white;
-        border: 1px solid #e5e7eb;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.38s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.38s ease;
+        background: linear-gradient(180deg, var(--surface-strong), rgba(255, 255, 255, 0.72));
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: var(--shadow-soft);
+        backdrop-filter: blur(16px);
+      }
+
+      .project-card::before {
+        content: '';
+        position: absolute;
+        inset: 0 0 auto;
+        height: 4px;
+        background: linear-gradient(90deg, rgba(182, 146, 95, 0.95), rgba(37, 99, 235, 0.95));
+        opacity: 0;
+        transition: opacity 0.3s ease;
       }
 
       .project-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-        border-color: #3b82f6;
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-strong);
+        border-color: rgba(37, 99, 235, 0.25);
       }
 
-      /* Tech Badges */
+      .project-card:hover::before {
+        opacity: 1;
+      }
+
       .tech-badge {
-        transition: all 0.3s ease;
-        font-size: 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        font-size: 0.72rem;
         font-weight: 600;
-        letter-spacing: 0.025em;
+        letter-spacing: 0.02em;
       }
 
       .tech-badge:hover {
-        transform: scale(1.05);
+        transform: translateY(-1px);
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
       }
 
-      /* Category Sections */
       .category-section {
         scroll-margin-top: 100px;
       }
 
-      /* Hero Gradient */
-      .hero-gradient {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      .detail-block {
+        background: rgba(15, 23, 42, 0.03);
+        border: 1px solid rgba(15, 23, 42, 0.06);
+        border-left: 3px solid rgba(37, 99, 235, 0.75);
+        border-radius: 0 16px 16px 0;
+        padding: 0.95rem 1.05rem;
+        margin: 0.7rem 0;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: #334155;
       }
 
-      /* Stats Counter */
-      .stat-number {
+      .detail-block strong {
+        color: var(--text);
         font-weight: 800;
-        color: white;
       }
 
-      /* Modal Lightbox */
+      .impact-pill {
+        background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.45rem 0.85rem;
+        border-radius: 9999px;
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        margin-top: 0.85rem;
+        box-shadow: 0 16px 28px rgba(15, 23, 42, 0.12);
+      }
+
+      .project-card .inline-flex {
+        width: fit-content;
+        min-height: 40px;
+        padding: 0 0.1rem;
+        border-bottom: 1px solid rgba(37, 99, 235, 0.18);
+      }
+
+      .project-card .inline-flex:hover {
+        transform: translateX(2px);
+      }
+
+      .screenshot-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+        gap: 0.8rem;
+        margin-top: 1.2rem;
+      }
+
+      .screenshot-thumb {
+        position: relative;
+        aspect-ratio: 16/10;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        background: #0f172a;
+        transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+        cursor: pointer;
+        box-shadow: 0 16px 24px rgba(15, 23, 42, 0.08);
+      }
+
+      .screenshot-thumb::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 38%, rgba(15, 23, 42, 0.26) 100%);
+        opacity: 0.9;
+        pointer-events: none;
+      }
+
+      .screenshot-thumb:hover {
+        transform: translateY(-4px) scale(1.02);
+        border-color: rgba(37, 99, 235, 0.36);
+        box-shadow: 0 24px 40px rgba(15, 23, 42, 0.18);
+      }
+
+      .screenshot-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .screenshot-gallery.mobile {
+        grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+        max-width: 100%;
+      }
+
+      .screenshot-gallery.mobile .screenshot-thumb {
+        aspect-ratio: 9/19.5;
+        border-radius: 24px;
+        border: 4px solid #0f172a;
+      }
+
+      .screenshot-gallery.mobile .screenshot-thumb:hover {
+        border-color: #1d4ed8;
+      }
+
       .modal {
         display: none;
         position: fixed;
@@ -82,7 +473,8 @@
         max-height: 95%;
         object-fit: contain;
         animation: zoomIn 0.3s ease;
-        border-radius: 8px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
       }
 
       @keyframes fadeIn {
@@ -103,34 +495,22 @@
         }
       }
 
-      /* Sticky Navigation */
-      .sticky-nav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        backdrop-filter: blur(12px);
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 10px;
       }
 
       ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: rgba(15, 23, 42, 0.06);
       }
 
       ::-webkit-scrollbar-thumb {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(180deg, #1d4ed8 0%, #0f172a 100%);
         border-radius: 5px;
       }
 
-      /* Mobile Optimizations */
       @media (max-width: 640px) {
-        .project-card {
-          margin-bottom: 1rem;
+        .hero-panel-grid {
+          grid-template-columns: 1fr 1fr;
         }
 
         .tech-badge {
@@ -139,112 +519,20 @@
         }
       }
 
-      /* Print Styles */
-      @media print {
-        .no-print {
-          display: none !important;
-        }
-        .project-card {
-          break-inside: avoid;
-          page-break-inside: avoid;
-        }
-      }
-
-      /* Impact Pills */
-      .impact-pill {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        color: white;
-        font-size: 0.7rem;
-        font-weight: 700;
-        padding: 0.25rem 0.75rem;
-        border-radius: 9999px;
-        display: inline-block;
-        margin-top: 0.5rem;
-      }
-
-      /* Challenge/Solution Blocks */
-      .detail-block {
-        background: #f9fafb;
-        border-left: 3px solid #3b82f6;
-        padding: 0.75rem 1rem;
-        margin: 0.5rem 0;
-        font-size: 0.875rem;
-        line-height: 1.6;
-      }
-
-      .detail-block strong {
-        color: #1f2937;
-        font-weight: 700;
-      }
-
-      /* Screenshot Gallery */
-      .screenshot-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-
-      .screenshot-thumb {
-        aspect-ratio: 16/10;
-        border-radius: 8px;
-        overflow: hidden;
-        border: 2px solid #e5e7eb;
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-
-      .screenshot-thumb:hover {
-        transform: scale(1.05);
-        border-color: #3b82f6;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      .screenshot-thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      /* Mobile Screenshots - Portrait Orientation */
-      .screenshot-gallery.mobile {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        max-width: 100%;
-      }
-
-      .screenshot-gallery.mobile .screenshot-thumb {
-        aspect-ratio: 9/19.5;
-        border-radius: 16px;
-        border: 3px solid #1f2937;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .screenshot-gallery.mobile .screenshot-thumb:hover {
-        transform: scale(1.08);
-        border-color: #3b82f6;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .view-screenshots-btn {
-        margin-top: 0.75rem;
-        padding: 0.5rem 1rem;
-        background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 0.875rem;
-        transition: all 0.3s ease;
-        display: inline-block;
-      }
-
-      .view-screenshots-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
-      }
-
       @media (max-width: 640px) {
+        .hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .nav-shell {
+          border-radius: 28px;
+        }
+
+        .nav-link {
+          flex: 1 1 calc(50% - 0.55rem);
+        }
+
         .screenshot-gallery {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -255,40 +543,83 @@
         }
       }
 
+      @media (min-width: 1024px) {
+        .hero-grid {
+          grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
+        }
+      }
+
       @media (min-width: 768px) {
         .screenshot-gallery.mobile {
           grid-template-columns: repeat(4, 1fr);
         }
       }
+
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+
+        .project-card {
+          break-inside: avoid;
+          page-break-inside: avoid;
+          box-shadow: none;
+        }
+      }
     </style>
   </head>
-  <body class="bg-gray-50 text-gray-900">
+  <body>
     <!-- Hero Section -->
-    <header class="hero-gradient text-white py-16 md:py-24">
+    <header class="hero-shell text-white py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Senior Full-Stack & AI Engineer</h1>
-          <p class="text-xl md:text-2xl mb-6 font-light opacity-95">10+ Years Experience | SaaS Architect | AI Integrator | Mobile Expert</p>
+        <div class="hero-grid">
+          <div>
+            <p class="hero-kicker">Enterprise SaaS • AI Systems • Mobile Delivery</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Senior Full-Stack & AI Engineer</h1>
+            <p class="hero-lead mb-5">10+ years architecting enterprise platforms, AI products, and mobile systems with production-grade reliability, strong product sense, and measurable business impact.</p>
+            <p class="hero-summary">A curated portfolio of 26 delivered projects across SaaS, AI, mobile, and fintech. Designed to highlight system thinking, execution depth, and the level of polish expected in high-trust software.</p>
 
-          <!-- Stats -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
-            <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-4 md:p-6">
-              <div class="stat-number text-3xl md:text-4xl text-white">26</div>
-              <div class="text-sm md:text-base mt-2 opacity-90">Projects</div>
+            <div class="hero-actions no-print">
+              <a href="#saas" class="hero-button">Explore Selected Work</a>
+              <a href="Portfolio Projects Reference.pdf" target="_blank" rel="noopener noreferrer" class="hero-secondary-button">Open Project PDF</a>
             </div>
-            <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-4 md:p-6">
-              <div class="stat-number text-3xl md:text-4xl text-white">10+</div>
-              <div class="text-sm md:text-base mt-2 opacity-90">Years Exp</div>
-            </div>
-            <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-4 md:p-6">
-              <div class="stat-number text-3xl md:text-4xl text-white">5</div>
-              <div class="text-sm md:text-base mt-2 opacity-90">Categories</div>
-            </div>
-            <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-4 md:p-6">
-              <div class="stat-number text-3xl md:text-4xl text-white">20+</div>
-              <div class="text-sm md:text-base mt-2 opacity-90">Technologies</div>
+
+            <div class="mt-10 flex flex-wrap gap-3">
+              <span class="focus-chip">Multi-tenant SaaS Architecture</span>
+              <span class="focus-chip">LLM & AI Product Integration</span>
+              <span class="focus-chip">Offline-First Mobile Systems</span>
             </div>
           </div>
+
+          <aside class="hero-panel">
+            <p class="panel-kicker text-white/60">Executive Snapshot</p>
+            <div class="hero-panel-grid">
+              <div class="metric-card">
+                <div class="stat-number text-3xl md:text-4xl text-white">26</div>
+                <span class="metric-label">Projects</span>
+              </div>
+              <div class="metric-card">
+                <div class="stat-number text-3xl md:text-4xl text-white">10+</div>
+                <span class="metric-label">Years Experience</span>
+              </div>
+              <div class="metric-card">
+                <div class="stat-number text-3xl md:text-4xl text-white">5</div>
+                <span class="metric-label">Practice Areas</span>
+              </div>
+              <div class="metric-card">
+                <div class="stat-number text-3xl md:text-4xl text-white">20+</div>
+                <span class="metric-label">Core Technologies</span>
+              </div>
+            </div>
+
+            <p class="text-sm text-white/72 mb-0">Focused on high-trust interfaces and resilient systems for enterprise operations, AI-assisted workflows, and data-heavy products.</p>
+            <div class="focus-list">
+              <span class="focus-chip">Enterprise SaaS</span>
+              <span class="focus-chip">AI & ML</span>
+              <span class="focus-chip">FinTech</span>
+              <span class="focus-chip">Mobile</span>
+            </div>
+          </aside>
         </div>
       </div>
     </header>
@@ -296,12 +627,12 @@
     <!-- Sticky Category Navigation -->
     <nav class="sticky-nav no-print">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div class="flex flex-wrap justify-center gap-2 md:gap-4">
-          <a href="#saas" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 🏢 SaaS (10) </a>
-          <a href="#ai-ml" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 🤖 AI & ML (4) </a>
-          <a href="#mobile" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 📱 Mobile (4) </a>
-          <a href="#fintech" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 💹 FinTech (4) </a>
-          <a href="#tools" class="px-3 md:px-4 py-2 rounded-lg text-sm md:text-base font-semibold text-gray-700 hover:bg-gray-100 transition"> 🛠️ Tools (4) </a>
+        <div class="nav-shell">
+          <a href="#saas" class="nav-link">Enterprise SaaS (10)</a>
+          <a href="#ai-ml" class="nav-link">AI &amp; ML (4)</a>
+          <a href="#mobile" class="nav-link">Mobile Apps (6)</a>
+          <a href="#fintech" class="nav-link">FinTech (4)</a>
+          <a href="#tools" class="nav-link">Specialized Tools (4)</a>
         </div>
       </div>
     </nav>
@@ -309,13 +640,11 @@
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <!-- Category 1: Enterprise SaaS & Cloud Platforms -->
-      <section id="saas" class="category-section mb-20">
-        <div class="mb-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3 flex items-center gap-3">
-            <span>🏢</span>
-            <span>Enterprise SaaS & Cloud Platforms</span>
-          </h2>
-          <p class="text-gray-600 text-lg">10 mission-critical enterprise systems serving Fortune 500 clients</p>
+      <section id="saas" class="category-section section-shell mb-20">
+        <div class="mb-8 section-heading">
+          <p class="section-kicker">Category 01</p>
+          <h2 class="text-3xl md:text-4xl font-bold">Enterprise SaaS &amp; Cloud Platforms</h2>
+          <p class="section-description">10 mission-critical enterprise systems serving Fortune 500 clients, distribution networks, and operational teams with high reliability requirements.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -621,13 +950,11 @@
       </section>
 
       <!-- Category 2: AI & Machine Learning Solutions -->
-      <section id="ai-ml" class="category-section mb-20">
-        <div class="mb-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3 flex items-center gap-3">
-            <span>🤖</span>
-            <span>AI & Machine Learning Solutions</span>
-          </h2>
-          <p class="text-gray-600 text-lg">4 cutting-edge AI projects leveraging LLMs, Computer Vision, and Multi-Agent Systems</p>
+      <section id="ai-ml" class="category-section section-shell mb-20">
+        <div class="mb-8 section-heading">
+          <p class="section-kicker">Category 02</p>
+          <h2 class="text-3xl md:text-4xl font-bold">AI &amp; Machine Learning Solutions</h2>
+          <p class="section-description">4 advanced AI products spanning LLM application layers, agent systems, computer vision, and multi-model reasoning workflows.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -816,13 +1143,11 @@
       </section>
 
       <!-- Category 3: Mobile & Offline-First Applications -->
-      <section id="mobile" class="category-section mb-20">
-        <div class="mb-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3 flex items-center gap-3">
-            <span>📱</span>
-            <span>Mobile & Offline-First Applications</span>
-          </h2>
-          <p class="text-gray-600 text-lg">6 high-performance mobile and realtime AI apps with production delivery experience</p>
+      <section id="mobile" class="category-section section-shell mb-20">
+        <div class="mb-8 section-heading">
+          <p class="section-kicker">Category 03</p>
+          <h2 class="text-3xl md:text-4xl font-bold">Mobile &amp; Offline-First Applications</h2>
+          <p class="section-description">6 production mobile products built for field execution, realtime communication, offline resilience, and complex operational workflows.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -1001,13 +1326,11 @@
       </section>
 
       <!-- Category 4: FinTech & Data Engineering -->
-      <section id="fintech" class="category-section mb-20">
-        <div class="mb-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3 flex items-center gap-3">
-            <span>💹</span>
-            <span>FinTech & Data Engineering</span>
-          </h2>
-          <p class="text-gray-600 text-lg">4 sophisticated trading and investment platforms leveraging ML and real-time data</p>
+      <section id="fintech" class="category-section section-shell mb-20">
+        <div class="mb-8 section-heading">
+          <p class="section-kicker">Category 04</p>
+          <h2 class="text-3xl md:text-4xl font-bold">FinTech &amp; Data Engineering</h2>
+          <p class="section-description">4 trading, analytics, and investment platforms combining ML pipelines, realtime data, and operational risk controls.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -1134,13 +1457,11 @@
       </section>
 
       <!-- Category 5: Specialized Tools & Consumer Apps -->
-      <section id="tools" class="category-section mb-20">
-        <div class="mb-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3 flex items-center gap-3">
-            <span>🛠️</span>
-            <span>Specialized Tools & Consumer Apps</span>
-          </h2>
-          <p class="text-gray-600 text-lg">4 utility and consumer-facing applications solving niche problems</p>
+      <section id="tools" class="category-section section-shell mb-20">
+        <div class="mb-8 section-heading">
+          <p class="section-kicker">Category 05</p>
+          <h2 class="text-3xl md:text-4xl font-bold">Specialized Tools &amp; Consumer Apps</h2>
+          <p class="section-description">4 focused products solving niche operational and consumer-facing problems with practical UX and targeted technical depth.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -1228,11 +1549,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-20">
+    <footer class="py-16 mt-20" style="background: linear-gradient(180deg, #08111f 0%, #0f172a 100%)">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-lg mb-4">Senior Full-Stack & AI Engineer Portfolio</p>
-        <p class="text-gray-400 text-sm">26 Projects | 10+ Years Experience | Available for Consultation</p>
-        <div class="mt-6 text-gray-500 text-xs">
+        <p class="text-lg mb-4 font-semibold tracking-tight">Senior Full-Stack &amp; AI Engineer Portfolio</p>
+        <p class="text-slate-300 text-sm">26 Projects | 10+ Years Experience | Available for Consultation</p>
+        <div class="mt-6 text-slate-500 text-xs">
           <p>Technologies: Next.js, React, Node.js, Python, React Native, .NET, AI/ML, Cloud Architecture</p>
         </div>
       </div>
