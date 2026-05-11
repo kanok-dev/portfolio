@@ -1,0 +1,750 @@
+# VeriSmart Portfolio - Complete Project Aggregation
+
+## Overview
+VeriSmart maintains a comprehensive portfolio of 24 full-stack software solutions spanning enterprise, SaaS, mobile, AI/ML, and trading platforms. The portfolio demonstrates expertise across multiple technology stacks, architectures, and business domains.
+
+---
+
+## 1. CONTENT-AI - ContentAI Pro
+**Type**: Full-Stack SaaS Platform | **Status**: Production
+
+### Description
+A comprehensive AI-powered content generation platform offering 130+ tools for creating marketing copy, articles, social media content, and business documents.
+
+### Tech Stack
+- **Frontend**: Next.js 15.5.6, React 18.3, Tailwind CSS, TypeScript
+- **Backend**: Node.js, tRPC (type-safe RPC), Next.js API routes
+- **Database**: PostgreSQL with Prisma ORM
+- **Payment**: Stripe integration with subscription management
+- **Features**: Multi-tier subscription, AI content tools, usage analytics, user dashboard
+
+### Architecture Highlights
+- Type-safe end-to-end API with tRPC
+- Prisma ORM for database abstraction
+- Modular AI tool architecture
+- Subscription lifecycle management via Stripe webhooks
+- Real-time usage tracking and analytics
+
+---
+
+## 2. DCAPORT - DCAPort Pro
+**Type**: Full-Stack Portfolio Management System | **Status**: Production
+
+### Description
+Comprehensive portfolio management and analysis platform for managing investment portfolios with real-time market data and algorithmic trading features.
+
+### Tech Stack
+- **Frontend**: React 18.3, Vite, Zustand (state management), Recharts (charting)
+- **Backend**: Node.js, Express.js, TypeScript
+- **Database**: PostgreSQL with Sequelize ORM
+- **Market Data**: Finnhub API integration
+- **Features**: Portfolio tracking, performance analytics, rebalancing tools, risk analysis
+
+### Architecture Highlights
+- Lightweight state management with Zustand
+- Efficient charting with Recharts
+- RESTful API with Express middleware
+- Real-time market data synchronization
+- Sequelize ORM for database operations
+- Vite for fast development builds
+
+---
+
+## 3. ELITE GOLD STRATEGIST - Elite Gold Trading Strategist
+**Type**: Algorithmic Trading Platform | **Status**: Production
+
+### Description
+Sophisticated algorithmic trading platform for precious metals and cryptocurrencies with multi-source data aggregation and automated trading strategies.
+
+### Tech Stack
+- **Backend**: Node.js, Express.js, TypeScript
+- **Validation**: Zod for runtime type validation
+- **Trading Indicators**: Tulind (technical analysis library)
+- **Data Sources**: Coinbase, Alpha Vantage, Finnhub APIs
+- **Trading Platform**: MetaTrader 5 integration
+- **Features**: Automated trading signals, strategy backtesting, portfolio rebalancing
+
+### Architecture Highlights
+- Multi-exchange data aggregation
+- Technical indicator computation with Tulind
+- Zod for API input validation
+- MetaTrader 5 direct order execution
+- Real-time signal generation
+- Strategy logging and performance tracking
+
+---
+
+## 4. EORDER-MOBILE - eOrder Mobile
+**Type**: Cross-Platform Mobile App | **Status**: Production
+
+**Links**:
+- App Store: https://apps.apple.com/th/app/eorder-app/id6468933075
+- Google Play: https://play.google.com/store/apps/details?id=com.verismart.eordering
+
+### Description
+Feature-rich React Native mobile application for order management with offline-first capabilities and multi-language support.
+
+**Links**:
+- App Store: https://apps.apple.com/th/app/eorder-app/id6468933075
+
+### Tech Stack
+- **Mobile Framework**: React Native 0.76+
+- **State Management**: Redux Toolkit
+- **Push Notifications**: Firebase Cloud Messaging
+- **Internationalization**: i18n support (Thai, English, Chinese, Japanese)
+- **Local Storage**: AsyncStorage, SQLite for offline data
+- **Features**: Order creation, tracking, notifications, offline mode
+
+### Architecture Highlights
+- Redux Toolkit for centralized state management
+- Firebase Cloud Messaging for real-time notifications
+- Offline-first data synchronization
+- Multi-language support with i18n
+- Intuitive mobile UX for order operations
+- Cross-platform iOS/Android support
+
+---
+
+## 5. EORDER-NOTIFICATION - NotifyHub Pro
+**Type**: Full-Stack Notification Platform | **Status**: Production
+
+### Description
+Enterprise-grade notification management system supporting multiple channels including Firebase Cloud Messaging, LINE Messaging API, and email delivery.
+
+### Tech Stack
+- **Frontend**: React 18.2, Material-UI (MUI), Redux
+- **Backend**: Node.js, Express.js
+- **Database**: Microsoft SQL Server
+- **Notification Channels**: Firebase Cloud Messaging, LINE Messaging API, Email
+- **Features**: Multi-channel delivery, notification templates, user preferences
+
+### Architecture Highlights
+- Multi-channel notification engine
+- Template-based message generation
+- Webhook integration for push events
+- Redux for frontend state management
+- Material-UI for responsive design
+- SQL Server for reliable data persistence
+
+---
+
+## 6. FIELDFORCE-PRO - FieldForce Pro / SmartMS3
+**Type**: Mobile Sales Force Automation | **Status**: Production
+
+### Description
+Comprehensive field sales app for sales representatives enabling real-time order entry, inventory checks, and customer relationship management.
+
+### Tech Stack
+- **Mobile Framework**: React Native 0.63.3
+- **State Management**: MobX
+- **Local Database**: Realm (offline-first)
+- **Navigation**: React Navigation
+- **Features**: Order entry, customer management, territory tracking, offline sync
+
+### Architecture Highlights
+- MobX for reactive state management
+- Realm for local persistent storage
+- Offline-first synchronization
+- Real-time inventory visibility
+- GPS-based territory management
+- Mobile-optimized for field operations
+
+---
+
+## 7. GOLDMIND - GoldMind AI
+**Type**: AI Orchestration Platform | **Status**: Production
+
+### Description
+Multi-AI orchestration platform integrating GPT-5, Claude, and Gemini for intelligent query processing and content generation with ensemble responses.
+
+### Tech Stack
+- **Frontend**: React, Vite, Tailwind CSS, Recharts
+- **Backend**: Node.js, Express.js
+- **AI APIs**: GPT-5 (OpenAI), Claude (Anthropic), Gemini (Google)
+- **Features**: Multi-AI ensemble, prompt optimization, response comparison, usage analytics
+
+### Architecture Highlights
+- Multi-AI API integration and fallback handling
+- Ensemble response generation for improved quality
+- Prompt optimization and versioning
+- Response comparison and analytics
+- Real-time streaming support
+- Cost optimization through provider selection
+
+---
+
+## 8. HELPDESK-AGENTIC-AI - HelpDesk AI
+**Type**: Agentic Customer Support Platform | **Status**: Production
+
+### Description
+Next-generation customer support platform using autonomous AI agents with knowledge base search and GPT-5 integration for intelligent issue resolution.
+
+### Tech Stack
+- **Frontend**: Next.js 15, React, Tailwind CSS
+- **Backend**: FastAPI (Python)
+- **AI Framework**: LangChain, LangGraph for agentic workflows
+- **AI Model**: GPT-4 for reasoning
+- **Vector Search**: FAISS for knowledge base retrieval
+- **Caching**: Redis for performance
+- **Features**: Autonomous agents, knowledge retrieval, conversation history
+
+### Architecture Highlights
+- FastAPI backend for high performance
+- LangChain/LangGraph for multi-step agent orchestration
+- FAISS vector database for semantic search
+- GPT-4 integration for complex reasoning
+- Redis caching for fast response times
+- Multi-agent collaborative problem-solving
+
+---
+
+## 9. KUGARDEN - KU Garden / LogiFlow
+**Type**: E-Commerce Logistics Platform | **Status**: Production
+
+### Description
+Comprehensive logistics and warehouse management platform for e-commerce operations with inventory tracking, order fulfillment, and distribution management.
+
+### Tech Stack
+- **Frontend**: React 18, Redux, Reactstrap, Bootstrap
+- **Charting**: ApexCharts
+- **Backend**: Node.js, Express.js
+- **Database**: PostgreSQL with Sequelize ORM
+- **Features**: Inventory management, order fulfillment, warehouse operations, logistics tracking
+
+### Architecture Highlights
+- Redux for centralized state management
+- Bootstrap/Reactstrap for responsive UI
+- ApexCharts for logistics analytics
+- PostgreSQL for reliable data storage
+- Comprehensive warehouse management workflow
+- Real-time inventory synchronization
+
+---
+
+## 10. ML-BEVERAGE-VISION - BeverageVision AI
+**Type**: Computer Vision Platform | **Status**: Production
+
+### Description
+AI-powered computer vision platform for beverage product detection and analysis using deep learning models.
+
+### Tech Stack
+- **ML Framework**: YOLOv5/YOLO11 for object detection
+- **Deep Learning**: PyTorch
+- **Backend**: FastAPI
+- **Frontend**: React, Material-UI
+- **Features**: Real-time object detection, image upload/processing, multi-format support
+
+### Architecture Highlights
+- State-of-the-art YOLO models for accurate detection
+- PyTorch backend for model inference
+- FastAPI for high-performance API
+- Multipart file upload handling
+- Real-time detection capabilities
+- Material-UI for professional UX
+
+---
+
+## 11. ML-QUANTFORGE - QuantForge
+**Type**: Machine Learning Trading Platform | **Status**: Production
+
+### Description
+ML-based algorithmic trading platform specializing in forex trading with ensemble machine learning models and strategy backtesting.
+
+### Tech Stack
+- **Language**: Python
+- **ML Libraries**: scikit-learn, XGBoost, TensorFlow, LightGBM
+- **Data Source**: yfinance for market data
+- **Backtesting**: Backtrader framework
+- **Currency Pair**: EUR/USD specialized models
+- **Features**: Predictive modeling, strategy backtesting, performance metrics
+
+### Architecture Highlights
+- Ensemble ML models (scikit-learn, XGBoost, TensorFlow)
+- yfinance integration for historical data
+- Backtrader for comprehensive strategy testing
+- Multiple feature engineering pipelines
+- Risk-adjusted performance metrics
+- Cross-validation and model evaluation
+
+---
+
+## 12. MONGKOL-PLATE - MongkolPlate
+**Type**: Thai License Plate Analyzer | **Status**: Production
+
+### Description
+Web application for Thai license plate recognition and analysis with OCR capabilities and data export functionality.
+
+### Tech Stack
+- **Frontend**: React 19, Vite, Tailwind CSS, Framer Motion
+- **UI Feedback**: SweetAlert2
+- **Data Export**: XLSX export capability
+- **Features**: License plate recognition, data export, visual analysis
+
+### Architecture Highlights
+- React 19 for latest features
+- Vite for fast development
+- Framer Motion for smooth animations
+- XLSX export for data portability
+- SweetAlert2 for user feedback
+- Optimized image processing
+
+---
+
+## 13. NEO - NEO Services
+**Type**: Database Monitoring SaaS | **Status**: Production
+
+### Description
+Cloud-based SaaS platform for monitoring and managing databases across multiple servers with comprehensive analytics and alerting.
+
+### Tech Stack
+- **Frontend**: React 19, Vite, TailwindCSS
+- **Backend**: Node.js, Express.js
+- **Databases**: PostgreSQL, Microsoft SQL Server
+- **Monitoring**: Real-time metrics collection
+- **Notifications**: LINE Messaging API integration
+- **Features**: Performance monitoring, alerting, multi-database support
+
+### Architecture Highlights
+- React 19 with Vite for optimal frontend performance
+- TailwindCSS for utility-first styling
+- Multi-database support with native drivers
+- Real-time metrics collection and aggregation
+- LINE Messaging for alert notifications
+- Scalable Node.js/Express backend
+
+---
+
+## 14. NURSESHIP - NurseShip
+**Type**: Healthcare Workforce Management SaaS | **Status**: Production
+
+### Description
+Multi-tenant SaaS platform for healthcare staffing management, nurse scheduling, and workforce optimization with comprehensive administrative controls.
+
+### Tech Stack
+- **Frontend**: Next.js 15.3.1, React 19
+- **Backend**: Next.js API routes
+- **ORM**: Prisma ORM
+- **Database**: MySQL
+- **Architecture**: Multi-tenant with database isolation
+- **Features**: Shift scheduling, nurse profiles, assignment management, reporting
+
+### Architecture Highlights
+- Next.js full-stack application
+- Prisma ORM for type-safe database access
+- Multi-tenant architecture with data isolation
+- MySQL for reliable healthcare data storage
+- Real-time shift management
+- Comprehensive reporting and analytics
+
+---
+
+## 15. ODMS - ODMS Pro
+**Type**: Order/Delivery Management System | **Status**: Production
+
+### Description
+Enterprise order and delivery management system for multi-retailer environments with EDI processing capabilities.
+
+### Tech Stack
+- **Framework**: ASP.NET Core MVC
+- **ORM**: Entity Framework Core
+- **Database**: Microsoft SQL Server
+- **Features**: Order management, delivery tracking, EDI processing, retailer management
+
+### Architecture Highlights
+- ASP.NET Core MVC for enterprise scalability
+- Entity Framework Core for ORM
+- SQL Server for robust data management
+- Multi-retailer order orchestration
+- EDI integration for supply chain
+- Comprehensive order lifecycle management
+
+---
+
+## 16. PJP-MOBILE - PJP Mobile
+**Type**: Field Sales Performance Management | **Status**: Production
+
+**Links**:
+- Google Play: https://play.google.com/store/apps/details?id=com.verismart.pjp
+
+### Description
+Mobile application for field sales teams enabling real-time performance tracking, customer visits, and sales analytics.
+
+### Tech Stack
+- **Mobile Framework**: React Native 0.79.3
+- **State Management**: MobX State Tree (MST)
+- **Local Storage**: MMKV (high-performance persistence)
+- **Navigation**: React Navigation
+- **Features**: Visit tracking, performance metrics, real-time sync, offline mode
+
+### Architecture Highlights
+- MobX State Tree for predictable state management
+- MMKV for fast local persistence
+- Offline-first synchronization strategy
+- Real-time performance analytics
+- GPS-based visit tracking
+- Optimized for field operations
+
+---
+
+## 17. SMARTESM - SmartESM
+**Type**: Retail Execution Management | **Status**: Production
+
+### Description
+Retail execution management platform for field merchandisers and sales teams with real-time data collection and inventory management.
+
+**Links**:
+- App Store: https://apps.apple.com/th/app/esm-smart-merchant/id1498603283
+- Google Play: https://play.google.com/store/apps/details?id=th.co.verismart.esm.standard.android
+
+### Tech Stack
+- **Frontend**: React 18, Redux
+- **Backend**: Node.js, Express.js
+- **ORM**: Sequelize
+- **Database**: MariaDB / Microsoft SQL Server (dual support)
+- **Features**: Store execution tracking, inventory management, reporting
+
+### Architecture Highlights
+- React 18 with Redux for state management
+- Dual database support (MariaDB and SQL Server)
+- Sequelize ORM for database abstraction
+- Real-time execution data collection
+- Comprehensive reporting dashboards
+- Field operation optimization
+
+---
+
+## 18. SMARTMS3 - SmartMS3 / FieldForce Pro
+**Type**: Mobile Sales Force Automation | **Status**: Production
+
+### Description
+Comprehensive mobile SFA platform for managing sales distribution, order entry, and customer interactions in the field.
+
+### Tech Stack
+- **Mobile Framework**: React Native
+- **State Management**: MobX or Redux
+- **Local Storage**: Realm or SQLite
+- **Navigation**: React Navigation
+- **Features**: Order entry, customer management, territory tracking, offline sync
+
+### Architecture Highlights
+- Mobile-optimized for field sales
+- Offline-first data synchronization
+- Real-time inventory visibility
+- Territory and customer management
+- Performance tracking and analytics
+- Comprehensive field sales tools
+
+---
+
+## 19. SMARTREDEEM - SmartRedeem Pro
+**Type**: B2B Loyalty Points Redemption | **Status**: Production
+
+### Description
+Comprehensive loyalty points management and redemption platform for B2B customers with multi-distributor support and automated point calculation.
+
+### Tech Stack
+- **Frontend**: Next.js 9, React, Ant Design, Ant Design Mobile
+- **Backend**: Next.js API routes with Next-Connect
+- **State Management**: Redux with Redux Thunk
+- **Database**: MySQL (primary) + MSSQL (ERP integration)
+- **Authentication**: JWT with Express-JWT
+- **File Handling**: Multer, Excel4node
+- **Features**: Point calculation, product catalog, redemption workflows, reporting
+
+### Architecture Highlights
+- Dual-database architecture (MySQL + MSSQL)
+- Automatic point calculation from ERP data
+- Redux-powered shopping cart
+- Excel reporting with server-side generation
+- Multi-tenant distributor support
+- Comprehensive workflow management
+
+---
+
+## 20. SMARTSALES - SmartSales Pro
+**Type**: Sales Force Automation SaaS | **Status**: Production
+
+### Description
+Multi-tenant SaaS platform for sales force automation with comprehensive customer management, pipeline tracking, and reporting capabilities.
+
+### Tech Stack
+- **Framework**: .NET 6, ASP.NET Core
+- **ORM**: Entity Framework Core
+- **Dependency Injection**: Autofac
+- **Database**: SQL Server
+- **Architecture**: Multi-tenant with database-per-tenant isolation
+- **Features**: CRM, pipeline management, sales reporting, team collaboration
+
+### Architecture Highlights
+- .NET 6 for enterprise robustness
+- ASP.NET Core MVC/API architecture
+- Entity Framework Core for ORM
+- Database-per-tenant isolation pattern
+- Comprehensive sales pipeline management
+- Advanced reporting and analytics
+
+---
+
+## 21. THAIRESTAURANTFINDER - ThaiDine Finder
+**Type**: Location-Based Restaurant Discovery | **Status**: Production
+
+### Description
+Mobile-optimized web application for discovering Thai restaurants with location-based search, ratings, and detailed restaurant information.
+
+### Tech Stack
+- **Frontend**: React 18, Material-UI
+- **Backend**: Node.js, Express.js
+- **APIs**: Google Places API, Google Geocoding API
+- **Features**: Restaurant search, location-based discovery, ratings, directions
+
+### Architecture Highlights
+- Google Places API integration
+- Material-UI for responsive design
+- Location-based filtering and search
+- Real-time restaurant information
+- Route integration with Google Maps
+- Mobile-optimized user experience
+
+---
+
+## 22. TRAVELEXPENSE - TravelExpense Pro
+**Type**: Enterprise Expense Management | **Status**: Production
+
+### Description
+Enterprise expense management and reimbursement platform with integration to SAP and multi-currency support.
+
+### Tech Stack
+- **Frontend**: Next.js 14, React, Material-UI
+- **State Management**: Redux
+- **Backend**: Express.js
+- **Database**: SQL Server
+- **ERP Integration**: SAP
+- **Features**: Expense tracking, approval workflows, reimbursement processing, reporting
+
+### Architecture Highlights
+- Next.js 14 for SEO and performance
+- Material-UI for enterprise UI
+- Redux for complex state management
+- SQL Server for reliable data persistence
+- SAP integration for financial systems
+- Multi-currency and multi-language support
+
+---
+
+## 23. USBT - USBT Pro
+**Type**: University Sports Tournament Platform | **Status**: Production
+
+### Description
+Comprehensive platform for managing university sports tournaments with comprehensive scheduling, scoring, and team management features.
+
+### Tech Stack
+- **Backend**: NestJS 10 framework
+- **API**: GraphQL with Apollo Server 4
+- **Database**: MySQL 8
+- **Frontend**: Next.js 14.2, React
+- **UI Framework**: Ant Design
+- **Features**: Tournament scheduling, scoring, team management, bracket generation
+
+### Architecture Highlights
+- NestJS for scalable backend architecture
+- GraphQL with Apollo Server for flexible queries
+- MySQL 8 for reliable data storage
+- Next.js 14 for modern frontend
+- Ant Design for enterprise UI components
+- Real-time tournament updates
+
+---
+
+## 24. VERISMART-TRACKING - VeriSmart Tracking
+**Type**: Device Maintenance & Warranty SaaS | **Status**: Production
+
+### Description
+Multi-tenant SaaS platform for device maintenance tracking, warranty management, and service scheduling with comprehensive distributor and company isolation.
+
+### Tech Stack
+- **Frontend**: Next.js 15, React 18, Mantine UI
+- **ORM**: Prisma
+- **Database**: SQL Server
+- **Architecture**: Multi-tenant with company/distributor isolation
+- **Features**: Device tracking, warranty management, service scheduling, maintenance logs
+
+### Architecture Highlights
+- Next.js 15 for modern full-stack development
+- Mantine UI for polished component library
+- Prisma ORM for type-safe database access
+- SQL Server for reliable data management
+- Multi-tenant isolation at company/distributor level
+- Comprehensive device lifecycle management
+
+---
+
+## Cross-Portfolio Technology Analysis
+
+### Frontend Technologies
+- **Primary**: React 18+, Next.js 14+
+- **Mobile**: React Native
+- **State Management**: Redux, Zustand, MobX, Context API
+- **UI Libraries**: Material-UI, Ant Design, Tailwind CSS, Mantine
+- **Build Tools**: Vite, Next.js built-in
+
+### Backend Technologies
+- **Node.js/Express**: Primary backend choice
+- **.NET Core**: Enterprise platforms
+- **FastAPI**: AI/ML services
+- **NestJS**: Structured GraphQL APIs
+
+### Database Technologies
+- **Primary**: PostgreSQL, MySQL, SQL Server
+- **NoSQL**: MongoDB (when used)
+- **ORMs**: Prisma, Sequelize, Entity Framework Core
+- **Caching**: Redis
+
+### AI/ML Technologies
+- **Large Language Models**: GPT-4, Claude, Gemini
+- **Computer Vision**: YOLOv5, YOLO11, PyTorch
+- **ML Libraries**: scikit-learn, XGBoost, TensorFlow
+- **Agentic**: LangChain, LangGraph
+- **Vector Search**: FAISS
+
+### Enterprise Integration
+- **ERP Systems**: SAP, Microsoft SQL Server
+- **APIs**: Google Places, Finnhub, Alpha Vantage, Coinbase
+- **Payment**: Stripe
+- **Messaging**: Firebase Cloud Messaging, LINE Messaging API
+- **Trading**: MetaTrader 5
+
+### Architecture Patterns
+- **Multi-tenant SaaS**: 7+ platforms
+- **Full-Stack Applications**: 20+ projects
+- **Microservices**: Selected platforms
+- **Offline-First**: Mobile applications
+- **Event-Driven**: Notification systems
+- **GraphQL**: USBT Pro
+- **RESTful APIs**: Majority of platforms
+
+### Security & Authentication
+- **JWT**: Token-based authentication
+- **OAuth**: Integration support
+- **Bcrypt**: Password hashing
+- **Role-Based Access Control (RBAC)**: All enterprise platforms
+- **Data Isolation**: Multi-tenant separation
+
+### Deployment & Operations
+- **Cloud Platforms**: AWS, Cloudflare
+- **Containerization**: Docker
+- **Process Management**: PM2
+- **Monitoring**: Application performance monitoring
+- **CI/CD**: GitHub Actions, automated deployments
+
+---
+
+## Portfolio Summary Statistics
+
+- **Total Projects**: 24
+- **Full-Stack Applications**: 20+
+- **Mobile Applications**: 5+
+- **AI/ML Platforms**: 4
+- **SaaS Platforms**: 10+
+- **Enterprise Solutions**: 8+
+- **Primary Language**: JavaScript/TypeScript
+- **Secondary Languages**: Python (.NET), C#
+- **Total Technology Stack**: 100+ technologies
+- **Average Project Complexity**: High
+- **Industry Coverage**: Finance, Healthcare, Retail, Logistics, Education, Hospitality, Technology
+
+---
+
+## Common Architecture Patterns Across Portfolio
+
+### 1. Modern Full-Stack Web
+- Next.js/React frontend with Node.js/Express or .NET backend
+- PostgreSQL/MySQL for relational data
+- Prisma/Sequelize for ORM
+- Redux/Zustand for state management
+
+### 2. Mobile-First Approach
+- React Native for cross-platform mobile
+- Offline-first with local storage (Realm, SQLite, MMKV)
+- Real-time synchronization with backend
+- Native performance optimizations
+
+### 3. Multi-Tenant SaaS
+- Separate databases per tenant or schema isolation
+- Row-level security for data isolation
+- Flexible billing and subscription management
+- Comprehensive role-based access control
+
+### 4. AI Integration
+- Multiple LLM providers (GPT-4, Claude, Gemini)
+- Specialized ML models for domain-specific tasks
+- Vector databases for semantic search
+- Agentic systems for autonomous problem-solving
+
+### 5. Enterprise Integration
+- ERP system connectivity (SAP, MSSQL)
+- EDI processing for supply chain
+- Legacy system compatibility
+- Comprehensive audit logging
+
+---
+
+## Key Technical Strengths
+
+1. **Full-Stack Competency**: Expertise across frontend, backend, and infrastructure
+2. **Scalability**: Multi-tenant architecture and load handling
+3. **Security**: JWT authentication, RBAC, encrypted data handling
+4. **AI/ML Integration**: Modern LLM and ML model integration
+5. **Enterprise Integration**: ERP connectivity, payment processing, API integrations
+6. **Mobile Optimization**: Cross-platform mobile development with React Native
+7. **Database Expertise**: Multi-database support (PostgreSQL, MySQL, SQL Server, MongoDB)
+8. **Performance**: Optimized for large datasets and real-time operations
+9. **User Experience**: Responsive design, accessibility, mobile-first approaches
+10. **Business Logic**: Complex domain-specific implementations (trading, loyalty, healthcare, etc.)
+
+---
+
+## Portfolio Growth Timeline & Focus Areas
+
+The portfolio demonstrates evolution across several dimensions:
+
+- **2019-2021**: Foundation with foundational SaaS platforms (SmartRedeem, SmartSales)
+- **2021-2022**: Mobile expansion (eOrder Mobile, PJP Mobile, FieldForce Pro)
+- **2022-2023**: Enterprise integration and multi-tenant focus (SmartESM, ODMS, TravelExpense)
+- **2023-2024**: AI/ML integration and advanced features (GoldMind, HelpDesk AI, BeverageVision)
+- **2024-2025**: Next-generation architecture with modern frameworks (Next.js 15, React 19, Mantine)
+
+---
+
+## Recommended Next Steps for Portfolio Enhancement
+
+1. **Containerization**: Standardize Docker deployment across all projects
+2. **Observability**: Implement comprehensive logging and monitoring (ELK, Datadog)
+3. **Testing**: Add standardized test coverage (Unit, Integration, E2E)
+4. **Documentation**: API documentation with OpenAPI/GraphQL schema
+5. **Performance**: Implement caching strategies (Redis, CDN)
+6. **Security**: Regular security audits and penetration testing
+7. **CI/CD**: Automated deployment pipelines for all projects
+
+---
+
+## End of Portfolio Aggregation
+
+This llms.txt file serves as a comprehensive index of all 24 VeriSmart projects with technical details, architecture patterns, and portfolio-wide insights. Use this as a reference for understanding the complete technology landscape and architectural decisions across the portfolio.
+
+## 25. Defectech - Defectech Pro
+**Type**: Enterprise Mobile App & Backend | **Status**: Production
+
+### Description
+A comprehensive building inspection and defect management suite offering mobile apps for field inspectors, complete with offline mode, Google Calendar syncing, advanced image annotation, and an admin dashboard.
+
+**Links**:
+- Website: https://www.defectech.com.au
+- App Store: https://apps.apple.com/th/app/inspector-baseline/id6761975149
+
+### Tech Stack
+- **Mobile App (Defectech Building Inspector Mobile)**: React Native, Expo SDK 55, Expo Router, TypeScript
+- **State Management & Offline**: TanStack Query, AsyncStorage
+- **Web App (Defectech Frontend)**: React 19, Vite, Tailwind CSS, Leaflet Maps
+- **Backend (Defectech Backend)**: Node.js, Express, PostgreSQL with Prisma ORM, Supabase
+- **Cloud & Media**: AWS S3 (via Uppy), Bull (for queues), SendGrid
+- **Features**: Offline defect capture, image annotation, dynamic PDF report generation, Google Calendar integration, stripe payment, team management
