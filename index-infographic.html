@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senior Full-Stack & AI Engineer Portfolio Infographic</title>
+    <meta name="description" content="Executive infographic portfolio for a Senior Full-Stack and AI Engineer across SaaS, AI/ML, mobile, fintech, and specialized platforms." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f4efe7;
+        --ink: #0f172a;
+        --muted: #526071;
+        --line: rgba(15, 23, 42, 0.12);
+        --panel: rgba(255, 255, 255, 0.92);
+        --panel-soft: rgba(248, 250, 252, 0.9);
+        --navy: #07111f;
+        --navy-soft: #10284a;
+        --blue: #1d4ed8;
+        --blue-soft: rgba(29, 78, 216, 0.09);
+        --gold: #b6925f;
+        --teal: #0f766e;
+        --green: #166534;
+        --amber: #a16207;
+        --slate: #334155;
+        --shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+        --radius-xl: 30px;
+        --radius-lg: 22px;
+        --radius-md: 16px;
+      }
+
+      @page {
+        size: A4 landscape;
+        margin: 10mm;
+      }
+
+      * {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: 'Manrope', sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(29, 78, 216, 0.1), transparent 24%),
+          radial-gradient(circle at top right, rgba(182, 146, 95, 0.14), transparent 20%),
+          linear-gradient(180deg, #fcfbf8 0%, var(--bg) 100%);
+      }
+
+      .sheet {
+        width: min(297mm, calc(100vw - 32px));
+        min-height: 210mm;
+        margin: 20px auto;
+        padding: 18mm;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92));
+        border: 1px solid var(--line);
+        border-radius: 32px;
+        box-shadow: var(--shadow);
+      }
+
+      .mono {
+        font-family: 'IBM Plex Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 18px 20px 20px;
+        border-radius: var(--radius-xl);
+        color: white;
+        background:
+          radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), transparent 24%),
+          radial-gradient(circle at top right, rgba(182, 146, 95, 0.18), transparent 22%),
+          linear-gradient(135deg, var(--navy) 0%, #0c1b33 40%, var(--navy-soft) 100%);
+      }
+
+      .hero::after {
+        content: '';
+        position: absolute;
+        inset: auto -6% -28% auto;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, transparent 72%);
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.55fr 0.95fr;
+        gap: 18px;
+        align-items: start;
+      }
+
+      .hero-kicker {
+        margin: 0 0 10px;
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 11px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 0;
+      }
+
+      .hero-title {
+        max-width: 650px;
+        font-size: 42px;
+        line-height: 1;
+        letter-spacing: -0.05em;
+        font-weight: 800;
+      }
+
+      .hero-subtitle {
+        margin-top: 12px;
+        max-width: 640px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0 10px;
+        border-radius: 9999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.07);
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .hero-panel {
+        padding: 14px;
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+        backdrop-filter: blur(14px);
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .metric {
+        padding: 10px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .metric-value {
+        display: block;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .metric-label {
+        display: block;
+        margin-top: 4px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 10px;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: 0.92fr 1.55fr 1.05fr;
+        gap: 14px;
+        margin-top: 14px;
+      }
+
+      .panel {
+        padding: 14px;
+        border-radius: var(--radius-lg);
+        background: linear-gradient(180deg, var(--panel), var(--panel-soft));
+        border: 1px solid var(--line);
+      }
+
+      .panel-title {
+        margin-bottom: 10px;
+        font-size: 11px;
+        color: var(--blue);
+      }
+
+      .panel-heading {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+
+      .panel-copy {
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.55;
+      }
+
+      .bullet-list {
+        display: grid;
+        gap: 7px;
+        margin-top: 12px;
+      }
+
+      .bullet-item {
+        display: grid;
+        grid-template-columns: 12px 1fr;
+        gap: 8px;
+        align-items: start;
+        font-size: 11px;
+        color: var(--slate);
+      }
+
+      .bullet-item::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        margin-top: 4px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--gold), var(--blue));
+      }
+
+      .domain-card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .domain-card {
+        padding: 12px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.88);
+      }
+
+      .domain-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .domain-name {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .domain-count {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        height: 24px;
+        padding: 0 8px;
+        border-radius: 9999px;
+        background: var(--blue-soft);
+        color: var(--blue);
+        font-size: 10px;
+        font-weight: 800;
+      }
+
+      .domain-note {
+        color: var(--muted);
+        font-size: 10px;
+        line-height: 1.45;
+        margin-bottom: 8px;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .project-tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 0 8px;
+        border-radius: 9999px;
+        background: rgba(15, 23, 42, 0.05);
+        color: #334155;
+        font-size: 9.5px;
+        font-weight: 700;
+      }
+
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .stack-box {
+        padding: 11px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+
+      .stack-box h4 {
+        margin-bottom: 6px;
+        font-size: 10px;
+        color: var(--blue);
+      }
+
+      .stack-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .stack-items span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 22px;
+        padding: 0 7px;
+        border-radius: 9999px;
+        background: rgba(15, 23, 42, 0.06);
+        font-size: 9.5px;
+        font-weight: 700;
+        color: var(--slate);
+      }
+
+      .impact-strip {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .impact-card {
+        padding: 11px;
+        border-radius: 16px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 248, 251, 0.92));
+        border: 1px solid var(--line);
+      }
+
+      .impact-card strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .impact-card span {
+        display: block;
+        color: var(--muted);
+        font-size: 10px;
+        line-height: 1.45;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 10px;
+      }
+
+      .footer strong {
+        color: var(--ink);
+      }
+
+      @media screen and (max-width: 1200px) {
+        .sheet {
+          width: min(1100px, calc(100vw - 24px));
+          min-height: auto;
+          padding: 18px;
+        }
+
+        .hero-grid,
+        .summary-grid,
+        .impact-strip {
+          grid-template-columns: 1fr;
+        }
+
+        .domain-card-grid,
+        .stack-grid,
+        .metric-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media screen and (max-width: 760px) {
+        body {
+          padding: 12px 0 24px;
+        }
+
+        .sheet {
+          width: calc(100vw - 16px);
+          border-radius: 20px;
+          padding: 14px;
+        }
+
+        .hero-title {
+          font-size: 32px;
+        }
+
+        .domain-card-grid,
+        .stack-grid,
+        .metric-grid,
+        .impact-strip {
+          grid-template-columns: 1fr;
+        }
+
+        .footer {
+          flex-direction: column;
+        }
+      }
+
+      @media print {
+        body {
+          background: white;
+          color: #111827;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        .sheet {
+          width: 100%;
+          min-height: auto;
+          margin: 0;
+          padding: 0;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          background: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sheet">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <p class="hero-kicker mono">Executive Infographic Portfolio</p>
+            <h1 class="hero-title">Senior Full-Stack &amp; AI Engineer</h1>
+            <p class="hero-subtitle">A print-first snapshot of systems delivered across enterprise SaaS, AI products, mobile platforms, fintech tooling, and specialist applications.</p>
+            <div class="hero-meta">
+              <span class="meta-chip">10+ Years Experience</span>
+              <span class="meta-chip">5 Portfolio Domains</span>
+              <span class="meta-chip">Enterprise + AI + Mobile + FinTech</span>
+              <span class="meta-chip">Standalone HTML to PDF Workflow</span>
+            </div>
+          </div>
+
+          <aside class="hero-panel">
+            <p class="mono" style="font-size: 10px; color: rgba(255, 255, 255, 0.65)">Snapshot</p>
+            <div class="metric-grid">
+              <div class="metric">
+                <span class="metric-value">26+</span>
+                <span class="metric-label">portfolio systems</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">20+</span>
+                <span class="metric-label">core technologies</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">B2B</span>
+                <span class="metric-label">enterprise-first delivery</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">AI</span>
+                <span class="metric-label">LLM + CV + automation</span>
+              </div>
+            </div>
+            <p style="margin-top: 12px; font-size: 10px; line-height: 1.55; color: rgba(255, 255, 255, 0.78)">Focus areas include multi-tenant SaaS, offline-first mobile execution, AI product integration, data-heavy workflows, and high-trust product presentation.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="summary-grid">
+        <aside class="panel">
+          <p class="panel-title mono">Delivery Lens</p>
+          <h2 class="panel-heading">What This Portfolio Signals</h2>
+          <p class="panel-copy">Built for quick executive review: product range, technical depth, system patterns, and the sectors most relevant to employers or clients.</p>
+
+          <div class="bullet-list">
+            <div class="bullet-item"><span>Full-stack ownership across frontend, backend, data, and integrations.</span></div>
+            <div class="bullet-item"><span>Comfortable with business-critical systems, not just demo applications.</span></div>
+            <div class="bullet-item"><span>Strong mix of product delivery, architecture thinking, and UI presentation quality.</span></div>
+            <div class="bullet-item"><span>Track record across operations-heavy, trust-sensitive, and AI-enabled products.</span></div>
+          </div>
+
+          <div class="impact-strip" style="grid-template-columns: 1fr; margin-top: 12px">
+            <div class="impact-card">
+              <strong>Enterprise</strong>
+              <span>Multi-tenant platforms, approvals, ERP sync, logistics, dashboards.</span>
+            </div>
+            <div class="impact-card">
+              <strong>AI</strong>
+              <span>LLM workflows, multi-agent support, computer vision, consensus models.</span>
+            </div>
+          </div>
+        </aside>
+
+        <main class="panel">
+          <p class="panel-title mono">Portfolio Map</p>
+          <h2 class="panel-heading">Domain Coverage</h2>
+          <div class="domain-card-grid">
+            <article class="domain-card">
+              <div class="domain-top">
+                <h3 class="domain-name">Enterprise SaaS &amp; Cloud</h3>
+                <span class="domain-count">10+</span>
+              </div>
+              <p class="domain-note">Operational systems, backoffice workflows, ERP-connected products, and multi-tenant delivery.</p>
+              <div class="project-tags">
+                <span class="project-tag">RouteForce Pro</span>
+                <span class="project-tag">USBT Pro</span>
+                <span class="project-tag">SmartSales</span>
+                <span class="project-tag">NurseShip</span>
+                <span class="project-tag">SmartESM</span>
+                <span class="project-tag">TravelExpense</span>
+                <span class="project-tag">VeriSmart</span>
+                <span class="project-tag">SmartRedeem</span>
+                <span class="project-tag">ODMS</span>
+                <span class="project-tag">LogiFlow</span>
+              </div>
+            </article>
+
+            <article class="domain-card">
+              <div class="domain-top">
+                <h3 class="domain-name">AI &amp; Machine Learning</h3>
+                <span class="domain-count">4+</span>
+              </div>
+              <p class="domain-note">Content generation, multi-agent support automation, computer vision, and multi-model intelligence.</p>
+              <div class="project-tags">
+                <span class="project-tag">ContentAI Pro</span>
+                <span class="project-tag">HelpDesk AI</span>
+                <span class="project-tag">BeverageVision AI</span>
+                <span class="project-tag">GoldMind AI</span>
+              </div>
+            </article>
+
+            <article class="domain-card">
+              <div class="domain-top">
+                <h3 class="domain-name">Mobile &amp; Offline-First</h3>
+                <span class="domain-count">6+</span>
+              </div>
+              <p class="domain-note">Field execution apps, live translation, B2B commerce, and inspection workflows across iOS and React Native.</p>
+              <div class="project-tags">
+                <span class="project-tag">MezzoSync</span>
+                <span class="project-tag">eOrder Mobile</span>
+                <span class="project-tag">SmartESM Mobile</span>
+                <span class="project-tag">Inspector Baseline</span>
+                <span class="project-tag">PJP Mobile</span>
+                <span class="project-tag">FieldForce Pro</span>
+              </div>
+            </article>
+
+            <article class="domain-card">
+              <div class="domain-top">
+                <h3 class="domain-name">FinTech &amp; Data</h3>
+                <span class="domain-count">4+</span>
+              </div>
+              <p class="domain-note">Algorithmic trading, portfolio analytics, automation, and market-data backed decision tooling.</p>
+              <div class="project-tags">
+                <span class="project-tag">QuantForge AI</span>
+                <span class="project-tag">GoldTrader Elite</span>
+                <span class="project-tag">DCAPort Pro</span>
+                <span class="project-tag">Binance AI Trader</span>
+              </div>
+            </article>
+
+            <article class="domain-card" style="grid-column: 1 / -1">
+              <div class="domain-top">
+                <h3 class="domain-name">Specialized Tools &amp; Consumer Apps</h3>
+                <span class="domain-count">4+</span>
+              </div>
+              <p class="domain-note">Utility products and niche consumer applications where focused UX, clear product logic, and integration work matter most.</p>
+              <div class="project-tags">
+                <span class="project-tag">NotifyHub Pro</span>
+                <span class="project-tag">NEO Services</span>
+                <span class="project-tag">MongkolPlate</span>
+                <span class="project-tag">ThaiDine Finder</span>
+              </div>
+            </article>
+          </div>
+        </main>
+
+        <aside class="panel">
+          <p class="panel-title mono">Technology &amp; Patterns</p>
+          <h2 class="panel-heading">Capability Stack</h2>
+
+          <div class="stack-grid">
+            <div class="stack-box">
+              <h4 class="mono">Frontend</h4>
+              <div class="stack-items">
+                <span>Next.js</span>
+                <span>React</span>
+                <span>Tailwind</span>
+                <span>Redux</span>
+                <span>tRPC</span>
+              </div>
+            </div>
+            <div class="stack-box">
+              <h4 class="mono">Backend</h4>
+              <div class="stack-items">
+                <span>Node.js</span>
+                <span>NestJS</span>
+                <span>Express</span>
+                <span>.NET</span>
+                <span>FastAPI</span>
+              </div>
+            </div>
+            <div class="stack-box">
+              <h4 class="mono">Data</h4>
+              <div class="stack-items">
+                <span>PostgreSQL</span>
+                <span>MySQL</span>
+                <span>SQL Server</span>
+                <span>Prisma</span>
+                <span>Redis</span>
+              </div>
+            </div>
+            <div class="stack-box">
+              <h4 class="mono">AI / ML</h4>
+              <div class="stack-items">
+                <span>GPT-4</span>
+                <span>Claude</span>
+                <span>Gemini</span>
+                <span>LangChain</span>
+                <span>PyTorch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="impact-strip">
+            <div class="impact-card">
+              <strong>Multi-tenant</strong>
+              <span>Database isolation, role-based access, scalable SaaS patterns.</span>
+            </div>
+            <div class="impact-card">
+              <strong>Realtime</strong>
+              <span>Subscriptions, websocket delivery, notifications, live sync.</span>
+            </div>
+            <div class="impact-card">
+              <strong>Offline-first</strong>
+              <span>Queued sync, local storage, resilient mobile workflows.</span>
+            </div>
+            <div class="impact-card">
+              <strong>High-trust UX</strong>
+              <span>Executive dashboards, enterprise portals, print-ready presentation.</span>
+            </div>
+          </div>
+
+          <div class="bullet-list" style="margin-top: 12px">
+            <div class="bullet-item"><span>Strong fit for platforms where business rules, integration depth, and delivery polish all matter.</span></div>
+            <div class="bullet-item"><span>Works across architecture, implementation, and product-facing interface refinement.</span></div>
+            <div class="bullet-item"><span>Comfortable translating complex operational needs into shippable systems.</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <div><strong>Portfolio URL:</strong> https://kanok-dev.github.io/portfolio/</div>
+        <div><strong>Positioning:</strong> Senior Full-Stack Engineer • AI Integrator • SaaS &amp; Mobile Product Builder</div>
+      </footer>
+    </div>
+  </body>
+</html>
